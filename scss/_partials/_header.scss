@@ -1,0 +1,190 @@
+/*=================================================================
+NAVIGATION BAR
+=================================================================*/
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.container {
+	width: 90%;
+	margin: auto;
+}
+.main-header {
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	padding: 15px;
+	box-sizing: border-box;
+	background: rgba(36, 48, 63, 0.93);
+	transition: all .3s ease-in-out;
+}
+body.header-solid .main-header,
+.header-scrolled {
+	background: rgba(36, 48, 63, 0.93);
+}
+.mobile-menu {
+	float: right;
+	padding-top: 2px;
+	color: #fff;
+	font-family: 'Avenir';
+	font-weight:700;
+}
+.mobile-menu:hover {
+	color: #24A1DB;
+	text-decoration: none;
+}
+.peaxy-logo {
+	align-self: center;
+}
+.nav {
+	display: none;
+	margin-top: 15px;
+}
+.nav a {
+	display: block;
+	color: #FFF;
+	font-family: 'Avenir';
+	font-weight:500;
+	font-size: 16px;
+	text-align: center;
+	padding: 5px;
+	border-bottom: 1px solid #ebecec;
+	text-decoration: none;
+}
+.nav .dropdown li a{
+	color:#000;
+}
+.nav .dropdown li a:hover{
+	color:red;
+}
+.nav a:hover {
+	color: #24A1DB;
+	border-bottom-color: #fff;
+	text-decoration: none;
+}
+
+/* SEARCH FORM */
+.search-form .form-group span.form-control-feedback img {
+	position: relative;
+	top: 3px;
+	right: 0px;
+}
+.nav li:nth-last-child(1) {
+	display: none;
+}
+
+/* MEDIA QUERIES */
+#scrollax-parent {
+	overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+	.header {
+		padding: 140px 0 0 0 !important;
+	}
+	.header h1 {
+		font-size: 40pt !important;
+	}
+}
+@media (min-width: 640px) {
+	.main-header {
+		height: auto;
+		justify-content: flex-end;
+		background: rgba(36, 48, 63, 0.47);
+	}
+	.header-scrolled {
+		background: rgba(36, 48, 63, 0.93);
+	}
+	.peaxy-logo {
+		padding: 5px 0 5px;
+	}
+	.main-header,
+	.nav {
+		display: flex !important;
+		flex-direction: column;
+	}
+	.mobile-menu {
+		display: none;
+	}
+	.nav {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.nav a {
+		font-size: 20px;
+		border-bottom-color: transparent;
+	}
+}
+@media (min-width: 965px) {
+	.main-header {
+		flex-direction: row;
+	}
+	.nav {
+		margin-top: 0;
+		margin-left: 20px;
+		margin-right: auto;
+		align-self: center;
+	}
+	.nav a {
+		padding: 10px 10px 5px 10px;
+		margin-top: 1px;
+	}
+	.peaxy-logo {
+		margin-right: 20px;
+		margin-left: auto;
+	}
+	.nav li {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.nav li:nth-last-child(1) {
+		display: block;
+	}
+}
+
+/* =========================================
+/* SEARCH FORM
+/* ========================================= */
+
+.search-form{
+    float:right;
+    .field-wrapper{
+        margin-top:4px;
+        position: relative;
+        &::after{
+            content:'';
+            width:32px;
+            height:32px;
+            position: absolute;
+            top:2px;
+            right:2px;
+            border-radius:50%;
+            background-color:#229fcf;
+            background-image:url('assets/img/magnify.png');
+            background-position:center;
+            background-repeat:no-repeat;
+        }
+        .search-field{
+            width:36px;
+            height:36px;
+            border:2px solid white;
+            border-radius:18px;
+            font: 18px 'Avenir';
+			font-weight: 400;
+            box-sizing: border-box;
+            transition:all 0.25s ease-in-out;
+            &:focus{
+                width:200px;
+                padding:0 44px 0 16px;
+                outline: none;
+            }
+        }
+        &:hover{
+            .search-field{
+                width:200px;
+                padding:0 44px 0 16px;
+            }
+        }
+    }
+}

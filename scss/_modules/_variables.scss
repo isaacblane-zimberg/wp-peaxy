@@ -1,0 +1,82 @@
+////////////////////////////////
+// Colors                     //
+////////////////////////////////
+
+$white:             #FFFFFF;
+$white-80:          rgba($white, 0.8);
+$white-60:          rgba($white, 0.6);
+$white-40:          rgba($white, 0.4);
+$white-20:          rgba($white, 0.2);
+$white-15:          rgba($white, 0.15);
+$white-10:          rgba($white, 0.1);
+
+$black:             #000;
+$black-80:          rgba($black, 0.8);
+$black-60:          rgba($black, 0.6);
+$black-40:          rgba($black, 0.4);
+$black-20:          rgba($black, 0.2);
+$black-15:          rgba($black, 0.15);
+$black-10:          rgba($black, 0.1);
+
+$navy:              #1e3043;
+
+
+////////////////////////////////
+// Typography                 //
+////////////////////////////////
+
+$primary-font: 'Avenir';
+
+// Font Sizes
+$fs-xxl: 42px;
+$lh-xxl: 56px;
+
+$fs-xl: 32px;
+$lh-xl: 42px;
+
+$fs-l: 22px;
+$lh-l: 32px;
+
+$fs-m: 16px;
+$lh-m: 24px;
+
+$fs-s: 14px;
+$lh-s: 24px;
+
+$fs-xs: 12px;
+$lh-xs: 16px;
+
+
+////////////////////////////////
+// Spacing                    //
+////////////////////////////////
+
+$spacing-xxs: 4px;
+$spacing-xs: 8px;
+$spacing-s: 16px;
+$spacing-m: 24px;
+$spacing-l: 32px;
+$spacing-xl: 40px;
+$spacing-xxl: 48px;
+$spacing-xxxl: 56px;
+
+$container-max-width: 1156px;
+
+//===== BREAKPOINTS
+//=================
+
+$bp-xsmall: 30em; // 480px
+$bp-small: 48em; // 768px
+$bp-medium: 64em; // 1024px
+$bp-large: 85.375em; // 1366px
+$bp-xlarge: 120em; // 1920px
+$bp-xxlarge: 160em; // 2560px
+
+// Media Queries
+$mq-xsmall: "(min-width: #{$bp-xsmall})";
+$mq-small: "(min-width: #{$bp-small})";
+$mq-medium: "(min-width: #{$bp-medium})";
+$mq-large: "(min-width: #{$bp-large})";
+$mq-xlarge: "(min-width: #{$bp-xlarge})";
+$mq-xxlarge: "(min-width: #{$bp-xxlarge})";
+$mq-retina: "(-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi)";

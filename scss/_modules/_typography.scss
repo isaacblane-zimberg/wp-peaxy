@@ -1,0 +1,82 @@
+/*=================================================================
+FONTS
+=================================================================*/
+@font-face {
+	font-family: 'Avenir';
+	src: url('assets/fonts/Avenir-Book.eot');
+	src: url('assets/fonts/Avenir-Book.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/Avenir-Book.woff') format('woff'),
+		url('assets/fonts/Avenir-Book.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir';
+	src: url('assets/fonts/Avenir-Medium.eot');
+	src: url('assets/fonts/Avenir-Medium.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/Avenir-Medium.woff') format('woff'),
+		url('assets/fonts/Avenir-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir';
+	src: url('assets/fonts/AvenirLTStd-Heavy.eot');
+	src: url('assets/fonts/AvenirLTStd-Heavy.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/AvenirLTStd-Heavy.woff') format('woff'),
+		url('assets/fonts/AvenirLTStd-Heavy.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir';
+	src: url('assets/fonts/AvenirLTStd-Black.eot');
+	src: url('assets/fonts/AvenirLTStd-Black.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/AvenirLTStd-Black.woff') format('woff'),
+		url('assets/fonts/AvenirLTStd-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+// Base Typography
+
+body{
+	font-family:'Avenir';
+}
+
+h1, h2, h3, h4, h5, h6{
+	margin-bottom:1em;
+}
+
+h1{
+}
+
+h2{
+}
+
+h3{
+}
+
+h4{
+}
+
+p{
+	margin-bottom:1em;
+	&:last-child{
+		margin-bottom:0;
+	}
+}
+
+h1, h2, h3, h4, h5, h6{
+}
+
+small{
+}
+
+a{
+    &:hover{
+    }
+}
