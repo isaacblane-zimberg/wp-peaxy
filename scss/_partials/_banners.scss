@@ -16,7 +16,7 @@
     background-size: cover;
     background-color:$navy;
     &.is--clipped{
-        clip-path: polygon(50% 100%, 0 92%, 0 0, 100% 0, 100% 92%);
+        clip-path: polygon(50% 100%, 0 calc(100% - 30px), 0 0, 100% 0, 100% calc(100% - 30px));
     }
     &.has--video{
         background:none;

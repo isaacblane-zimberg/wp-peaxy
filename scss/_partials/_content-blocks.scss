@@ -1,15 +1,65 @@
 //===== GENERAL
 //=============
 
-.content-block{ 
+.content-block{
     padding:48px 0;
+    position: relative;
     background-size: cover;
     background-position: center;
+    &.mask--tri-t{
+        clip-path: polygon(0 30px, calc(50% - 49px) 30px, 50% 0, calc(50% + 49px) 30px, 100% 30px, 100% 100%, 0 100%);
+    }
+    &.mask--tri-b{
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(50% + 49px) calc(100% - 30px), 50% 100%, calc(50% - 49px) calc(100% - 30px), 0 calc(100% - 30px));
+    }
+    &.mask--tri-tb{
+        clip-path: polygon(0 30px, calc(50% - 49px) 30px, 50% 0, calc(50% + 49px) 30px, 100% 30px, 100% calc(100% - 30px), calc(50% + 49px) calc(100% - 30px), 50% 100%, calc(50% - 49px) calc(100% - 30px), 0 calc(100% - 30px));
+    }
+    &.mask--hex{
+        &::before, &::after{
+            content:'';
+            width:50px;
+            height:58px;
+            display: block;
+            position: absolute;
+            left:50%;
+            transform:translateX(-50%);
+            background-image:url('assets/img/hex.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size:cover;
+        }
+        &::before{
+            top:17px;
+        }
+        &::after{
+            bottom:17px;
+        }
+    }
+    &.mask--point-b{
+        clip-path: polygon(50% 100%, 0 calc(100% - 30px), 0 0, 100% 0, 100% calc(100% - 30px));
+    }
 }
-
 @media #{$mq-medium} {
     .content-block{
         padding:72px 0;
+        &.mask--hex{
+            .container{
+                position: relative;
+                &::after{
+                    content: '';
+                    width:4px;
+                    height:calc(100% - 48px);
+                    position:absolute;
+                    position: absolute;
+                    top:50%;
+                    left:50%;
+                    transform: translate(-50%, -50%);
+                    background-image:url('assets/img/dotted-vert.png');
+                    background-repeat: repeat-y;
+                }
+            }
+        }
     }
 }
 
@@ -43,6 +93,119 @@
         .cite__name{
             text-transform: uppercase;
             font-weight:700;
+        }
+    }
+}
+
+//===== BLOCK: WYSISYG
+//====================
+.type--wysiwyg{
+
+}
+
+//===== BLOCK: PANEL
+//====================
+.type--panel{
+    .container{
+        box-shadow: 0 0 24px rgba(0,0,0,0.25);
+        padding: 24px;
+    }
+}
+//=== Split Layout Panel
+.type--panel-split{
+    .container{
+        .flex__wrapper{
+            align-items: stretch;
+            .flex__child{
+                width:calc(50% - 9px);
+                .flex__child--inner{
+                    padding:24px;
+                }
+            }
+            .flex__divider{
+                width:18px;
+                display: block;
+                background-image:url('assets/img/double-dotted.png');
+                background-repeat: repeat-y;
+            }
+        }
+    }
+}
+//=== Anchor Blocks Panel
+.type--panel-anchor{
+    .anchor{
+        padding:24px;
+        box-sizing: border-box;
+        color:$white;
+        text-align: center;
+        border-radius:4px;
+        background-color:$navy;
+        .anchor__icon{
+            width:64px;
+            height:64px;
+            display: inline-block;
+            position: relative;
+            img{
+                width:100%;
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%, -50%);
+            }
+            .anchor__icon--light{
+                visibility: hidden;
+            }
+        }
+        h3{
+            margin-bottom:0;
+            margin-top:8px;
+        }
+        p{
+            color:$white-80;
+            line-height: 1.2em;
+        }
+        .btn{
+            display: block;
+        }
+        &:hover{
+            background-color: #156385;
+            .anchor__icon{
+                .anchor__icon--light{
+                    visibility: visible;
+                }
+                .anchor__icon--dark{
+                    visibility: hidden;
+                }
+            }
+            .btn{
+                background-color:#40aedd;
+            }
+        }
+    }
+}
+
+//===== BLOCK: SPLIT LAYOUT
+//=========================
+.type--split{
+    .flex__wrapper{
+        .flex__child{
+            width:100%;
+            padding:24px;
+            box-sizing: border-box;
+            .flex__child--inner{
+                &.has--shadow{
+                    box-shadow: 0 0 24px rgba(0,0,0,0.25);
+                }
+            }
+        }
+    }
+}
+@media #{$mq-medium} {
+    .type--split{
+        .flex__wrapper{
+            .flex__child{
+                width:50%;
+            }
         }
     }
 }

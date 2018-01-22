@@ -5,3 +5,35 @@
         max-width:$container-max-width;
     }
 }
+
+.flex__wrapper{
+    display: flex;
+    flex-direction: column;
+    &.rtl{
+        flex-flow: column-reverse;
+    }
+    &.v-align-flex-start, &.v-align-center, &.v-align-flex-end{
+        align-items: flex-start;
+    }
+}
+@media #{$mq-medium} {
+    .flex__wrapper{
+        flex-direction: row;
+        align-items: flex-start;
+        &.rtl{
+            flex-flow: row;
+        }
+        &.v-align-flex-start{
+            align-items: flex-start;
+        }
+        &.v-align-center{
+            align-items: center;
+        }
+        &.v-align-flex-end{
+            align-items: flex-end;
+        }
+        .flex__child{
+            flex-grow: 1;
+        }
+    }
+}

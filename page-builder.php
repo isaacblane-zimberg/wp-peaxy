@@ -54,12 +54,13 @@
 
 <!-- Start: CONTENT BLOCKS -->
 <?php if( have_rows('sections') ): ?>
-<?php while( have_rows('sections') ): the_row(); ?>
-
-    <?php $type = get_sub_field('block_type'); ?>
-    <?php $bg_image = get_sub_field('bg_image'); ?>
-    <?php $bg_color = get_sub_field('bg_color'); ?>
-    <?php $classes = get_sub_field('classes'); ?>
+<?php
+    while( have_rows('sections') ): the_row();
+    $type = get_sub_field('block_type');
+    $bg_image = get_sub_field('bg_image');
+    $bg_color = get_sub_field('bg_color');
+    $classes = get_sub_field('classes');
+?>
 
     <!--  Block: Box -->
     <?php if ($type == 'box'): ?>
@@ -99,24 +100,79 @@
         </section>
     <?php endif; ?>
 
-    <!--  Block: Panel -->
-    <?php if ($type == 'panel'): ?>
+    <!--  Block: Panel (Split Layout) -->
+    <?php if ($type == 'panel-split'): ?>
+        <?php $content = get_sub_field('block_panel_split'); ?>
+        <section class="content-block type--panel type--<?php echo $type . ' ' . $classes; ?>" style="<?php if ($bg_image){echo 'background-image:url(\'' . $bg_image . '\');';} if ($bg_color){echo 'background-color:'. $bg_color;} ?>">
+            <div class="container container--fw">
+                <div style="padding:0 24px;">
+                    <?php echo $content['top_panel']; ?>
+                </div>
+                <div class="flex__wrapper">
+                    <div class="flex__child">
+                        <div class="flex__child--inner">
+                            <?php echo $content['left_panel']; ?>
+                        </div>
+                    </div>
+                    <div class="flex__divider">&nbsp;</div>
+                    <div class="flex__child">
+                        <div class="flex__child--inner">
+                            <?php echo $content['right_panel']; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php endif; ?>
+
+    <!--  Block: Panel (Anchor Blocks) -->
+    <?php if ($type == 'panel-anchor'): ?>
+        <?php $content = get_sub_field('block_panel_anchor'); ?>
+        <section class="content-block type--panel type--<?php echo $type . ' ' . $classes; ?>" style="<?php if ($bg_image){echo 'background-image:url(\'' . $bg_image . '\');';} if ($bg_color){echo 'background-color:'. $bg_color;} ?>">
+            <div class="container container--fw">
+                <div style="padding:0 24px;">
+                    <?php echo $content['content']; ?>
+                </div>
+                <div class="row">
+                    <?php if( have_rows('anchor_blocks') ): ?>
+                    <?php while( have_rows('anchor_blocks') ): the_row(); ?>
+                        <div class="col col--3-of-12 col--m-1-of-2">
+                            <div class="anchor">
+                                <div class="anchor__icon">
+                                    <img class="anchor__icon--light" src="<?php the_sub_field('light_icon'); ?>" alt="">
+                                    <img class="anchor__icon--dark" src="<?php the_sub_field('dark_icon'); ?>" alt="">
+                                </div>
+                                <h3><?php the_sub_field('title'); ?></h3>
+                                <p><?php the_sub_field('description'); ?></p>
+                                <a class="btn" href="<?php the_sub_field('anchor_id'); ?>"><?php the_sub_field('anchor_text'); ?></a>
+                            </div>
+                        </div>
+                    <?php endwhile; endif; ?>
+                </div>
+            </div>
+        </section>
     <?php endif; ?>
 
     <!--  Block: Split Layout -->
     <?php if ($type == 'split'): ?>
-        <?php $content = get_sub_field('block_split'); ?>
+        <?php
+            $content = get_sub_field('block_split_layout');
+            $stack = $content['stack_order'];
+            $alignment = $content['column_alignment'];
+            $shadowLeft = $content['left_shadow'];
+            $shadowRight = $content['right_shadow'];
+        ?>
         <section class="content-block type--<?php echo $type . ' ' . $classes; ?>" style="<?php if ($bg_image){echo 'background-image:url(\'' . $bg_image . '\');';} if ($bg_color){echo 'background-color:'. $bg_color;} ?>">
             <div class="container container--fw">
-                <div class="block__wrapper">
-                    <div class="block">
-                        <div class="block__inner">
-                            Left
+                <div class="flex__wrapper <?php echo $stack . ' v-align-' . $alignment; ?>">
+                    <div class="flex__child">
+                        <div class="flex__child--inner <?php if ($shadowLeft){echo ' has--shadow';} ?>">
+                            <?php echo $content['left_block']; ?>
                         </div>
                     </div>
-                    <div class="block">
-                        <div class="block__inner">
-                            Rightd
+                    <div class="flex__child">
+                        <div class="flex__child--inner <?php if ($shadowRight){echo ' has--shadow';} ?>">
+                            <?php echo $content['right_block']; ?>
                         </div>
                     </div>
                 </div>
