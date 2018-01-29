@@ -16,6 +16,15 @@
         align-items: flex-start;
     }
 }
+.masonry{
+    column-count:2;
+    column-gap:24px;
+    .masonry__child{
+        margin-top:24px;
+        box-sizing: border-box;
+        break-inside: avoid;
+    }
+}
 @media #{$mq-medium} {
     .flex__wrapper{
         flex-direction: row;

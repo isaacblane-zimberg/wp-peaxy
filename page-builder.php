@@ -62,10 +62,10 @@
     $classes = get_sub_field('classes');
 ?>
 
-    <!--  Block: Box -->
     <?php if ($type == 'box'): ?>
+        <!--  Block: Box -->
         <?php $content = get_sub_field('block_box'); ?>
-        <section class="content-block type--<?php echo $type . ' ' . $classes; ?>" style="<?php if ($bg_image){echo 'background-image:url(\'' . $bg_image . '\');';} if ($bg_color){echo 'background-color:'. $bg_color;} ?>">
+        <section id="<?php the_sub_field('id'); ?>" class="content-block type--<?php echo $type . ' ' . $classes; ?>" style="<?php if ($bg_image){echo 'background-image:url(\'' . $bg_image . '\');';} if ($bg_color){echo 'background-color:'. $bg_color;} ?>">
             <div class="container container--fw">
                 <div class="row">
                     <div class="col col--6-of-12 col--centered">
@@ -76,10 +76,10 @@
         </section>
     <?php endif; ?>
 
-    <!--  Block: Quote -->
     <?php if ($type == 'quote'): ?>
+        <!--  Block: Quote -->
         <?php $content = get_sub_field('block_quote'); ?>
-        <section class="content-block type--<?php echo $type . ' ' . $classes; ?>" style="<?php if ($bg_image){echo 'background-image:url(\'' . $bg_image . '\');';} if ($bg_color){echo 'background-color:'. $bg_color;} ?>">
+        <section id="<?php the_sub_field('id'); ?>" class="content-block type--<?php echo $type . ' ' . $classes; ?>" style="<?php if ($bg_image){echo 'background-image:url(\'' . $bg_image . '\');';} if ($bg_color){echo 'background-color:'. $bg_color;} ?>">
             <div class="container container--fw">
                 <span class="quote"><?php echo $content['quote']; ?></span>
                 <div class="citation">
@@ -90,23 +90,27 @@
         </section>
     <?php endif; ?>
 
-    <!--  Block: WYSIWYG -->
     <?php if ($type == 'wysiwyg'): ?>
+        <!--  Block: WYSIWYG -->
         <?php $content = get_sub_field('block_wysiwyg'); ?>
-        <section class="content-block type--<?php echo $type . ' ' . $classes; ?>" style="<?php if ($bg_image){echo 'background-image:url(\'' . $bg_image . '\');';} if ($bg_color){echo 'background-color:'. $bg_color;} ?>">
+        <section id="<?php the_sub_field('id'); ?>" class="content-block type--<?php echo $type . ' ' . $classes; ?>" style="<?php if ($bg_image){echo 'background-image:url(\'' . $bg_image . '\');';} if ($bg_color){echo 'background-color:'. $bg_color;} ?>">
             <div class="container container--fw">
                 <?php echo $content['wysiwyg']; ?>
             </div>
         </section>
     <?php endif; ?>
 
-    <!--  Block: Panel (Split Layout) -->
     <?php if ($type == 'panel-split'): ?>
+        <!--  Block: Panel (Split Layout) -->
         <?php $content = get_sub_field('block_panel_split'); ?>
-        <section class="content-block type--panel type--<?php echo $type . ' ' . $classes; ?>" style="<?php if ($bg_image){echo 'background-image:url(\'' . $bg_image . '\');';} if ($bg_color){echo 'background-color:'. $bg_color;} ?>">
+        <section id="<?php the_sub_field('id'); ?>" class="content-block type--panel type--<?php echo $type . ' ' . $classes; ?>" style="<?php if ($bg_image){echo 'background-image:url(\'' . $bg_image . '\');';} if ($bg_color){echo 'background-color:'. $bg_color;} ?>">
             <div class="container container--fw">
                 <div style="padding:0 24px;">
-                    <?php echo $content['top_panel']; ?>
+                    <div class="row">
+                        <div class="col col--10-of-12 col--centered">
+                            <?php echo $content['top_panel']; ?>
+                        </div>
+                    </div>
                 </div>
                 <div class="flex__wrapper">
                     <div class="flex__child">
@@ -125,27 +129,31 @@
         </section>
     <?php endif; ?>
 
-    <!--  Block: Panel (Anchor Blocks) -->
     <?php if ($type == 'panel-anchor'): ?>
+        <!--  Block: Panel (Anchor Blocks) -->
         <?php $content = get_sub_field('block_panel_anchor'); ?>
-        <section class="content-block type--panel type--<?php echo $type . ' ' . $classes; ?>" style="<?php if ($bg_image){echo 'background-image:url(\'' . $bg_image . '\');';} if ($bg_color){echo 'background-color:'. $bg_color;} ?>">
+        <section id="<?php the_sub_field('id'); ?>" class="content-block type--panel type--<?php echo $type . ' ' . $classes; ?>" style="<?php if ($bg_image){echo 'background-image:url(\'' . $bg_image . '\');';} if ($bg_color){echo 'background-color:'. $bg_color;} ?>">
             <div class="container container--fw">
                 <div style="padding:0 24px;">
-                    <?php echo $content['content']; ?>
+                    <div class="row">
+                        <div class="col col--10-of-12 col--centered">
+                            <?php echo $content['content']; ?>
+                        </div>
+                    </div>
                 </div>
-                <div class="row">
+                <div class="flex__wrapper">
                     <?php if( have_rows('anchor_blocks') ): ?>
                     <?php while( have_rows('anchor_blocks') ): the_row(); ?>
-                        <div class="col col--3-of-12 col--m-1-of-2">
-                            <div class="anchor">
+                        <div class="anchor">
+                            <div class="anchor__info">
                                 <div class="anchor__icon">
                                     <img class="anchor__icon--light" src="<?php the_sub_field('light_icon'); ?>" alt="">
                                     <img class="anchor__icon--dark" src="<?php the_sub_field('dark_icon'); ?>" alt="">
                                 </div>
-                                <h3><?php the_sub_field('title'); ?></h3>
+                                <h4><?php the_sub_field('title'); ?></h4>
                                 <p><?php the_sub_field('description'); ?></p>
-                                <a class="btn" href="<?php the_sub_field('anchor_id'); ?>"><?php the_sub_field('anchor_text'); ?></a>
                             </div>
+                            <a class="btn" href="<?php the_sub_field('anchor_id'); ?>"><?php the_sub_field('anchor_text'); ?></a>
                         </div>
                     <?php endwhile; endif; ?>
                 </div>
@@ -153,8 +161,8 @@
         </section>
     <?php endif; ?>
 
-    <!--  Block: Split Layout -->
     <?php if ($type == 'split'): ?>
+        <!--  Block: Split Layout -->
         <?php
             $content = get_sub_field('block_split_layout');
             $stack = $content['stack_order'];
@@ -162,7 +170,7 @@
             $shadowLeft = $content['left_shadow'];
             $shadowRight = $content['right_shadow'];
         ?>
-        <section class="content-block type--<?php echo $type . ' ' . $classes; ?>" style="<?php if ($bg_image){echo 'background-image:url(\'' . $bg_image . '\');';} if ($bg_color){echo 'background-color:'. $bg_color;} ?>">
+        <section id="<?php the_sub_field('id'); ?>" class="content-block type--<?php echo $type . ' ' . $classes; ?>" style="<?php if ($bg_image){echo 'background-image:url(\'' . $bg_image . '\');';} if ($bg_color){echo 'background-color:'. $bg_color;} ?>">
             <div class="container container--fw">
                 <div class="flex__wrapper <?php echo $stack . ' v-align-' . $alignment; ?>">
                     <div class="flex__child">
@@ -180,12 +188,55 @@
         </section>
     <?php endif; ?>
 
-    <!--  Block: People List -->
     <?php if ($type == 'people'): ?>
+        <!--  Block: People List -->
+        <?php $content = get_sub_field('block_people_list'); ?>
+        <section id="<?php the_sub_field('id'); ?>" class="content-block type--<?php echo $type . ' ' . $classes; ?>" style="<?php if ($bg_image){echo 'background-image:url(\'' . $bg_image . '\');';} if ($bg_color){echo 'background-color:'. $bg_color;} ?>">
+            <div class="container container--fw">
+                <?php if ($content['title']) : ?>
+                <div style="padding:0 24px;">
+                    <h3><?php echo $content['title']; ?></h3>
+                </div>
+                <?php endif; ?>
+                <div class="row">
+                    <?php if( have_rows('people') ): ?>
+                    <?php while( have_rows('people') ): the_row(); ?>
+                        <?php $image = get_sub_field('photo'); ?>
+                        <div class="col col--1-of-5 col--m-1-of-3 col--s-1-of-2 team-member">
+                            <img class="team-member__photo" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                            <span class="team-member__name"><?php echo the_sub_field('name'); ?></span>
+                            <span class="team-member__title"><?php echo the_sub_field('title'); ?></span>
+                        </div>
+                    <?php endwhile; endif; ?>
+                </div>
+            </div>
+        </section>
     <?php endif; ?>
 
-    <!--  Block: Timeline -->
     <?php if ($type == 'timeline'): ?>
+        <!--  Block: Timeline -->
+        <?php $content = get_sub_field('block_timeline'); ?>
+        <section id="<?php the_sub_field('id'); ?>" class="content-block type--<?php echo $type . ' ' . $classes; ?>" style="<?php if ($bg_image){echo 'background-image:url(\'' . $bg_image . '\');';} if ($bg_color){echo 'background-color:'. $bg_color;} ?>">
+
+            <?php if( have_rows('events_group') ): ?>
+            <?php while( have_rows('events_group') ): the_row(); ?>
+                <div class="timeline">
+                    <div class="timeline-date"><?php the_sub_field('start_year'); ?></div>
+                    <?php if( have_rows('event') ): ?>
+            		<ul>
+                        <?php while( have_rows('event') ): the_row(); ?>
+            			<li class="fade-in fade-in-1">
+            				<div class="timeline-dot"></div>
+            				<h5><?php the_sub_field('date'); ?></h5>
+            				<h2><?php the_sub_field('title'); ?></h2>
+            				<p><?php the_sub_field('description'); ?></p>
+            			</li>
+                        <?php endwhile; ?>
+                    </ul>
+                    <?php endif; ?>
+                </div>
+            <?php endwhile; endif; ?>
+        </section>
     <?php endif; ?>
 
 <?php endwhile; endif; ?>

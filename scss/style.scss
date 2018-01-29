@@ -11,6 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import "_modules/variables";
 @import "_modules/modifiers";
 @import "_modules/typography";
+@import "_modules/animation";
 
 // Layout
 @import "_layout/grid";
@@ -20,4 +21,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import "_partials/banners";
 @import "_partials/buttons";
 @import "_partials/content-blocks";
+@import "_partials/footer";
 @import "_partials/header";
+@import "_partials/masks";
+@import "_partials/modal";
+
+// Pages (From the old site)
+@import "_partials/blog";
+@import "_partials/contact";
+@import "_partials/news";
+@import "_partials/misc-old-styles";

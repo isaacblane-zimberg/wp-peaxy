@@ -21,7 +21,7 @@
         <a class="mobile-menu" href="javascript:void(0);">MENU</a>
         <ul class="nav" id="main-navigation">
             <li>
-                <a href="/digital-twin/">Digital Twin</a>
+                <a href="/digital-twin">Digital Twin</a>
             </li>
             <li>
                 <a href="/industrial-analytics/">Industrial Analytics</a>

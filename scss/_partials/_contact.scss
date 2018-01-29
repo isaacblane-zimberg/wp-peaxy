@@ -1,0 +1,103 @@
+/*=================================================================
+CONTACT FORM MODAL
+=================================================================*/
+.modal-small {
+	width: 95% !important;
+	min-height: auto !important;
+	max-width: 700px;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+.modal-small .modal-content {
+	min-height: auto !important;
+}
+@media (min-width: 320px) {
+	.modal iframe {
+		height: 885px !important;
+	}
+}
+@media (min-width: 344px) {
+	.modal iframe {
+		height: 865px !important;
+	}
+}
+@media (min-width: 354px) {
+	.modal iframe {
+		height: 850px !important;
+	}
+}
+@media (min-width: 377px) {
+	.modal iframe {
+		height: 830px !important;
+	}
+}
+@media (min-width: 418px) {
+	.modal iframe {
+		height: 815px !important;
+	}
+}
+@media (min-width: 447px) {
+	.modal iframe {
+		height: 795px !important;
+	}
+}
+@media (min-width: 482px) {
+	.modal iframe {
+		height: 780px !important;
+	}
+}
+@media (min-width: 628px) {
+	.modal iframe {
+		height: 760px !important;
+	}
+}
+@media (min-width: 642px) {
+	.modal iframe {
+		height: 745px !important;
+	}
+}
+@media (min-width: 660px) {
+	.modal iframe {
+		height: 755px !important;
+	}
+}
+@media (min-width: 663px) {
+	.modal iframe {
+		height: 740px !important;
+	}
+}
+@media (min-width: 689px) {
+	.modal iframe {
+		height: 725px !important;
+	}
+}
+#contact-modal-body {
+	min-height: auto !important;
+	padding-bottom: 0;
+}
+#contact-modal-body p {
+	font-weight: 400;
+}
+
+.wpcf7-form label {
+    color: #494948;
+    width: 100%;
+}
+
+.wpcf7-form input {
+    width: 100%;
+    border: 1px solid #888;
+}
+
+.wpcf7-text{
+    padding:8px !important;
+}
+
+.wpcf7-form textarea {
+    width: 100%;
+    border: 1px solid #888;
+}
+
+.wpcf7-form .wpcf7-response-output {
+    color: #494948;
+}

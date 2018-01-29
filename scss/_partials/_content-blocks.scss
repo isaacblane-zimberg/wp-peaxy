@@ -4,40 +4,11 @@
 .content-block{
     padding:48px 0;
     position: relative;
+    background-color: $white;
     background-size: cover;
     background-position: center;
-    &.mask--tri-t{
-        clip-path: polygon(0 30px, calc(50% - 49px) 30px, 50% 0, calc(50% + 49px) 30px, 100% 30px, 100% 100%, 0 100%);
-    }
-    &.mask--tri-b{
-        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(50% + 49px) calc(100% - 30px), 50% 100%, calc(50% - 49px) calc(100% - 30px), 0 calc(100% - 30px));
-    }
-    &.mask--tri-tb{
-        clip-path: polygon(0 30px, calc(50% - 49px) 30px, 50% 0, calc(50% + 49px) 30px, 100% 30px, 100% calc(100% - 30px), calc(50% + 49px) calc(100% - 30px), 50% 100%, calc(50% - 49px) calc(100% - 30px), 0 calc(100% - 30px));
-    }
-    &.mask--hex{
-        &::before, &::after{
-            content:'';
-            width:50px;
-            height:58px;
-            display: block;
-            position: absolute;
-            left:50%;
-            transform:translateX(-50%);
-            background-image:url('assets/img/hex.svg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size:cover;
-        }
-        &::before{
-            top:17px;
-        }
-        &::after{
-            bottom:17px;
-        }
-    }
-    &.mask--point-b{
-        clip-path: polygon(50% 100%, 0 calc(100% - 30px), 0 0, 100% 0, 100% calc(100% - 30px));
+    &.padding--tight{
+        padding:24px 0;
     }
 }
 @media #{$mq-medium} {
@@ -60,6 +31,9 @@
                 }
             }
         }
+        &.padding--tight{
+            padding:40px 0;
+        }
     }
 }
 
@@ -80,10 +54,11 @@
 //===== BLOCK: QUOTE
 //==================
 .type--quote{
+    padding:120px 0;
     text-align: center;
     color:$white;
     background-color:$navy;
-    clip-path: polygon(0 8%, 50% 0, 100% 8%, 100% 92%, 50% 100%, 0 92%);
+    clip-path: polygon(0 30px, 50% 0, 100% 30px, 100% calc(100% - 30px), 50% 100%, 0 calc(100% - 30px));
     .quote{
         font-size:1.5em;
         line-height:1.25em;
@@ -95,12 +70,30 @@
             font-weight:700;
         }
     }
+    & + .content-section{
+        margin-top:-30px;
+        z-index: -1;
+    }
 }
 
 //===== BLOCK: WYSISYG
 //====================
 .type--wysiwyg{
-
+    img{
+        max-width:100%;
+    }
+    &.mask--tri-t{
+        padding-top:120px;
+    }
+    &.mask--tri-b{
+        padding-bottom:120px;
+    }
+    &.mask--tri-tb{
+        padding:120px 0;
+    }
+    &.padding--tight{
+        padding:48px 0;
+    }
 }
 
 //===== BLOCK: PANEL
@@ -115,18 +108,36 @@
 .type--panel-split{
     .container{
         .flex__wrapper{
-            align-items: stretch;
             .flex__child{
-                width:calc(50% - 9px);
+                width:100%;
                 .flex__child--inner{
                     padding:24px;
                 }
             }
             .flex__divider{
-                width:18px;
+                width:100%;
+                height:18px;
                 display: block;
-                background-image:url('assets/img/double-dotted.png');
-                background-repeat: repeat-y;
+                background-image:url('assets/img/double-dotted-hor.png');
+                background-repeat: repeat-x;
+            }
+        }
+    }
+}
+@media #{$mq-medium} {
+    .type--panel-split{
+        .container{
+            .flex__wrapper{
+                align-items: stretch;
+                .flex__child{
+                    width:calc(50% - 9px);
+                }
+                .flex__divider{
+                    width:18px;
+                    height:auto;
+                    background-image:url('assets/img/double-dotted.png');
+                    background-repeat: repeat-y;
+                }
             }
         }
     }
@@ -134,6 +145,7 @@
 //=== Anchor Blocks Panel
 .type--panel-anchor{
     .anchor{
+        width:100%;
         padding:24px;
         box-sizing: border-box;
         color:$white;
@@ -145,6 +157,7 @@
             height:64px;
             display: inline-block;
             position: relative;
+            margin-bottom:$spacing-xs;
             img{
                 width:100%;
                 position: absolute;
@@ -156,15 +169,17 @@
                 visibility: hidden;
             }
         }
-        h3{
-            margin-bottom:0;
+        h3,h4,h5{
+            margin-bottom:8px;
             margin-top:8px;
         }
         p{
+            font-size:1em;
             color:$white-80;
             line-height: 1.2em;
         }
         .btn{
+            width:100%;
             display: block;
         }
         &:hover{
@@ -180,6 +195,41 @@
             .btn{
                 background-color:#40aedd;
             }
+        }
+    }
+    .flex__wrapper{
+        margin-top:$spacing-l;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .anchor{
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom:$spacing-m;
+            .anchor__info{
+                margin-bottom:$spacing-m;
+            }
+        }
+    }
+}
+@media #{$mq-small} {
+    .type--panel-anchor{
+        .flex__wrapper{
+            flex-direction: row;
+        }
+        .anchor{
+            width:48%;
+        }
+    }
+}
+
+@media #{$mq-medium} {
+    .type--panel-anchor{
+        .anchor{
+            width:24%;
         }
     }
 }
@@ -199,6 +249,46 @@
             }
         }
     }
+    &.border--dots{
+        .container{
+            padding:24px 0;
+            position:relative;
+            &::before, &::after{
+                content:'';
+                width:100%;
+                height:4px;
+                display: block;
+                position: absolute;
+                background-image: url('assets/img/dotted-dark-hor.png');
+                background-repeat: repeat-x;
+            }
+            &::before{
+                top:0;
+            }
+            &::after{
+                bottom:0;
+            }
+        }
+        .flex__wrapper{
+            position: relative;
+            &::before, &::after{
+                content:'';
+                width:4px;
+                height:100%;
+                display: block;
+                position: absolute;
+                top:0;
+                background-image: url('assets/img/dotted-dark-vert.png');
+                background-repeat: repeat-y;
+            }
+            &::before{
+                left:-16px;
+            }
+            &::after{
+                right:-24px;
+            }
+        }
+    }
 }
 @media #{$mq-medium} {
     .type--split{
@@ -208,4 +298,199 @@
             }
         }
     }
+}
+
+//===== BLOCK: PEOPLE LIST
+//========================
+.type--people{
+    text-align: center;
+}
+.team-member{
+    margin-bottom:$spacing-l;
+    .team-member__photo{
+        width:100%;
+        margin-bottom:$spacing-s;
+    }
+    .team-member__name{
+        font-size:18px;
+        font-weight:700;
+        display: block;
+        color:$blue;
+    }
+    .team-member__title{
+        display: block;
+        font-size:14px;
+        font-weight:500;
+        color:$black-60;
+    }
+}
+
+//===== BLOCK: TIMELINE
+//=====================
+.timeline {
+	position: relative;
+	overflow: hidden;
+	margin-top: 8px;
+	padding: 0 6px 0 0;
+	&:before {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 3px;
+		background: #e9e9e9;
+		left: 13px;
+	}
+	h5 {
+		font-size: 11px;
+		color: #707070;
+		margin-top: 5px;
+	}
+	h2 {
+		font-weight:700;
+		font-size: 14px;
+		color: #4a90e2;
+	}
+	ul {
+		list-style: none;
+		padding: 0 0 0 17px;
+		z-index: 1;
+		margin: 20px 0 0 20px;
+        &::after{
+            content:'';
+            display: block;
+            clear:both;
+        }
+	}
+	li {
+		background: $white;
+		padding: 20px;
+		margin-bottom: 20px;
+		position: relative;
+		border-radius: 4px;
+		box-shadow: 0 3px 8px 2px $black-20;
+		&:before {
+			content: '';
+			width: 0;
+			height: 0;
+			border-right: 10px solid $white;
+			border-bottom: 10px solid transparent;
+			border-top: 10px solid transparent;
+			position: absolute;
+			left: -10px;
+			top: 21px;
+		}
+	}
+	p {
+		margin: 0;
+		font-size: 13px;
+	}
+}
+.timeline-date {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	font-weight:900;
+	font-size: 10px;
+	color: $white;
+	line-height: 30px;
+	text-align: center;
+	background-color: #f4354b;
+	box-shadow: 0 0 0 6px $white;
+}
+.timeline-dot {
+	position: absolute;
+	left: -28px;
+	top: 24px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	line-height: 40px;
+	text-align: center;
+	background-color: #f4354b;
+	box-shadow: 0 0 0 6px $white;
+}
+@media screen and(min-width: 480px) {
+	.timeline {
+		&:before {
+			left: 18px;
+		}
+		ul {
+			padding: 0 0 0 22px;
+		}
+		h2 {
+			font-size: 18px;
+		}
+		p {
+			font-size: 15px;
+		}
+	}
+	.timeline-date {
+		width: 40px;
+		height: 40px;
+		font-size: 12px;
+		line-height: 40px;
+	}
+}
+@media screen and(min-width: 660px) {
+	.timeline {
+		padding: 0 6px;
+		&:before {
+			left: 50%;
+		}
+		h2 {
+			font-size: 20px;
+		}
+		p {
+			font-size: 16px;
+		}
+		ul {
+			padding-left: 0;
+			max-width: 700px;
+			margin: 0 auto;
+		}
+		li {
+			width: 40.8%;
+			&:nth-child(odd) {
+				margin-top: 20px;
+				float: left;
+				&:before {
+					left: auto;
+					right: -10px;
+					border-right: none;
+					border-left: 10px solid $white;
+					border-bottom: 10px solid transparent;
+					border-top: 10px solid transparent;
+				}
+			}
+			&:nth-child(even) {
+				float: right;
+				margin-top: 60px;
+			}
+			&:nth-child(3) {
+				margin-top: 10px;
+			}
+			&:nth-child(4) {
+				margin-top: 50px;
+			}
+			&:nth-child(5) {
+				margin-top: 20px;
+			}
+			&:nth-of-type(2n + 1) {
+				clear: both;
+			}
+		}
+	}
+	.timeline-date {
+		margin: 0 auto;
+	}
+	li:nth-child(odd) .timeline-dot {
+		right: -31px;
+		left: auto;
+	}
+}
+@media screen and(min-width: 740px) {
+	.timeline li {
+		width: 40.8%;
+	}
 }

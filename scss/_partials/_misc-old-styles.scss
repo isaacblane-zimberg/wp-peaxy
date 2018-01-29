@@ -1,0 +1,446 @@
+/*=================================================================
+Legal Notices
+=================================================================*/
+#legal-notices {
+	padding: 40px 0 100px;
+}
+@media (min-width: 640px) {
+	#legal-notices {
+		padding: 120px 0 100px;
+	}
+}
+/*=================================================================
+404 Error PAGE
+=================================================================*/
+.container-404 {
+	margin-top: 200px;
+	margin-bottom: 100px;
+	text-align: center;
+}
+.container-404 hr {
+	margin: 20px auto;
+}
+.container-404 h1 {
+	font-family: 'Avenir-Heavy';
+	font-size: 70px;
+	color: #24303F;
+}
+.container-404 h4 {
+	text-align: center;
+}
+.container-404 p {
+	text-align: center;
+}
+.button {
+	margin: 40px auto 0 auto;
+	border-radius: 2px;
+	background-color: #4a90e2;
+	display: inline-block;
+}
+.button:hover {
+	background: #F52B3E;
+}
+.button p {
+	font-family: 'Avenir-Heavy';
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: #fff;
+	padding: 10px 20px;
+	margin: 0;
+}
+
+/*=================================================================
+GARTNER LANDING AND THANK YOU PAGES
+=================================================================*/
+#gartner {
+	background-image: url("/assets/img/bg/gartner-hero.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.table {
+	display: table;
+	width: 100%;
+}
+#gartner-landing-page {
+	max-width: 900px;
+	padding: 60px 0 100px;
+}
+.gartner-hero {
+	height: 280px;
+}
+.gartner-logo-container {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	top: 244px;
+}
+.gartner-logo {
+	width: 40%;
+}
+.gartner-sidebar {
+	display: table-cell;
+	width: 342px;
+	float: none;
+	padding-top: 30px;
+}
+.gartner-form-heading {
+	background-color: #3F6A90;
+	padding: 20px;
+	border-radius: 4px 4px 0 0;
+}
+.gartner-form-heading h3 {
+	text-align: center;
+	color: #fff;
+	font-weight: 600;
+	font-size: 30px;
+	letter-spacing: 1px;
+	margin-bottom: 0;
+}
+.gartner-form-heading h4 {
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	margin-top: 5px;
+}
+.gartner-form-heading p {
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	margin-bottom: 0;
+}
+.gartner-form {
+	background-color: #EDEDED;
+	padding: 30px 20px;
+	border-radius: 0 0 4px 4px;
+}
+.form-disclaimer {
+	margin-bottom: 0;
+	margin-top: -10px;
+}
+.form {
+	padding: 0 !important;
+}
+#gartner-content {
+	display: table-cell;
+	float: none;
+	padding-right: 30px;
+}
+@media (max-width: 768px) {
+	.table, .table #gartner-content, .table .gartner-sidebar {
+		display: block;
+	}
+	.table .gartner-sidebar {
+		width: 100%;
+		margin-top: 30px;
+	}
+	.gartner-logo-container {
+		top: 260px;
+	}
+	.gartner-logo {
+		width: 50%;
+	}
+}
+.company-update h4 {
+	font-style: italic;
+	color: #989898;
+	font-size: 28px;
+	font-weight: 500;
+}
+.gartner-header {
+	font-size: 36px;
+	line-height: 1.2;
+        margin-bottom:46px;
+}
+.gartner-features ul {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.gartner-features li {
+	margin-bottom: 30px;
+        margin-left: 20px;
+}
+.gartner-features h5 {
+	font-size: 21px;
+}
+.gartner-features p {
+	margin-top: 0;
+	margin-left: 45px;
+}
+.list-icon {
+	display: inline;
+	float: left;
+	overflow: hidden;
+	width: auto !important;
+	padding-right: 15px;
+	margin-top: 9px;
+}
+.disclaimer-container {
+	float: left;
+	margin-top: 40px;
+}
+.disclaimer {
+	font-size: 12px;
+}
+.thank-you {
+	text-align: center;
+	width: 100%;
+}
+.download-report {
+	margin: 0 auto 10px auto;
+	width: 80%;
+}
+#download-btn {
+	color: #fff;
+	font-size: 20px;
+	padding: 12px 0;
+	margin: 0;
+	width: 100%;
+}
+.thankyou-letter {
+	float: left;
+	margin-top: 20px;
+	padding: 30px;
+	border-radius: 6px;
+	border: 2px solid #F2F2F2;
+}
+@media (max-width: 660px) {
+	.company-update h4 {
+		font-size: 22px;
+	}
+	.gartner-header {
+		font-size: 24px;
+	}
+	.gartner-features h5 {
+		font-size: 20px;
+	}
+	.gartner-logo {
+		width: 60%;
+	}
+	.gartner-logo-container {
+		top: 250px;
+	}
+	#download-btn {
+		font-size: 18px;
+	}
+	.thankyou-letter h3 {
+		font-size: 24px;
+	}
+}
+@media (max-width: 450px) {
+	.gartner-logo-container {
+		top: 270px;
+	}
+	.gartner-logo {
+		width: 80%;
+	}
+	.thankyou-letter h3 {
+		font-size: 22px;
+	}
+}
+
+/*=================================================================
+STYLE ADJUSTS Added by Thought Labs as part of Landing Page changes
+=================================================================*/
+.gartner-info-link-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 769px) {
+  #gartner-info-links {
+    width: 96%;
+    margin: 30px auto;
+  }
+  .gartner-info-links:after {
+    content: "";
+    clear: both;
+    width: 100%;
+  }
+
+  .gartner-info-link {
+    width: 45%;
+    float: left;
+    margin: 0 2.5%;
+  }
+
+  .gartner-info-link-image {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #gartner-info-links {
+    width: 96%;
+    margin: 10px 2%;
+  }
+
+  .gartner-info-link {
+    padding: 10px 0;
+  }
+
+  .gartner-info-link-image {
+    text-align: center;
+    width:100%;
+  }
+}
+
+.blog-body li {
+	font-size: inherit;
+	margin:10px 0px;
+	list-style-type: decimal;
+}
+
+.blog-body ol {
+ 	margin-left:15px;
+}
+
+
+
+/* Homepage Graphic */
+#graphic-section p {
+	font-size: 18px;
+	margin: 40px 0;
+	line-height: 2;
+	padding: 0;
+}
+.graphics {
+	display: block;
+	margin: auto;
+	width: 100%;
+	padding: 20px 0 40px;
+}
+#outer-graphics {
+	margin-bottom: 20px;
+}
+#middle-graphic {
+	position: relative;
+}
+#middle-graphic:before, #middle-graphic:after {
+	content: '';
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+#middle-graphic:before {
+	background-image: url("/assets/img/graphic/arrow-4.svg");
+	width: 94px;
+	height: 36px;
+	left: -60px;
+	top: 20%;
+}
+#middle-graphic:after {
+	background-image: url("/assets/img/graphic/arrow-4.svg");
+	width: 94px;
+	height: 36px;
+	right: -75px;
+	top: 20%
+}
+#graphic-hr {
+	width: 114px;
+	height: 4px;
+	display: block;
+	margin: 0 auto 40px;
+	background-image: url("/assets/img/separator.png");
+	border: none;
+}
+.info {
+	position: relative;
+}
+#tooltip-one:before {
+    background-image: url("/assets/img/graphic/carrot.png");
+    background-size: 29px 14px;
+    width: 29px;
+    height: 14px;
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: -14px;
+    left: 85%;
+}
+#tooltip-two:before {
+    background-image: url("/assets/img/graphic/carrot.png");
+    background-size: 29px 14px;
+    width: 29px;
+    height: 14px;
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: -14px;
+    left: 58%;
+}
+.info-tooltip {
+	display: none;
+	position: absolute;
+	background: #FFFFFF;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 4px;
+	box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.20);
+	padding-left: 30px;
+	width: 80%;
+	max-width: 230px;
+}
+#tooltip-one {
+	top: -215px;
+	left: 51%;
+}
+#tooltip-two {
+	top: -260px;
+}
+.info-tooltip li {
+	font-size: 14px;
+    font-weight: 500;
+    line-height: 1.7;
+    color: #F4354B;
+    list-style-type: disc;
+}
+.info-tooltip li span {
+	color: #4a90e2;
+	white-space: nowrap;
+}
+.info-icon {
+	margin-left: 5px;
+}
+.show {
+	display: inline-block !important;
+}
+@media (max-width: 992px) {
+	#middle-graphic:before, #middle-graphic:after {
+		display: none;
+	}
+	.outer-graphics {
+		margin-bottom: 0;
+	}
+}
+@media (max-width: 1200px) {
+	.outer-graphics {
+		width: 205px;
+	}
+	#middle-graphic:before {
+		background-size: 85%;
+		top: 16%;
+		left: -60px;
+	}
+	#middle-graphic:after {
+		background-size: 85%;
+		top: 18%;
+		right: -62px;
+	}
+}
+
+@media (max-width: 800px) {
+	#tooltip-one {
+	left: 52%;
+	}
+}
+@media (max-width: 400px) {
+	#tooltip-one {
+	left: 53%;
+	}
+}

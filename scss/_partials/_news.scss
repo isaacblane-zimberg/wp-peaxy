@@ -1,0 +1,280 @@
+/*=================================================================
+CONTENT
+=================================================================*/
+/* Content Typography */
+.content {
+	max-width: 760px;
+	width: 90%;
+	padding: 40px 0 100px;
+	margin: auto;
+	transition: all .3s ease-in-out;
+	overflow: hidden;
+}
+/* Intro Section Titles */
+
+.content h2 {
+	font-family: 'Avenir';
+	font-size: 18px;
+	font-weight:700;
+	line-height: normal;
+	color: #24303f;
+	text-align: left;
+}
+/* Into Section Subtitles */
+
+.content h3 {
+	font-family: 'Avenir';
+	font-size: 16px;
+	line-height: normal;
+	color: #707070;
+	text-align: left;
+	margin-top: 20px;
+}
+.content h4 {
+	font-family: 'Avenir';
+	font-size: 16px;
+	font-weight:700;
+	line-height: normal;
+	text-align: left;
+	text-transform: uppercase;
+	color: #24303f;
+	margin-top: 40px
+}
+/* Section Subtitles */
+
+.content h5 {
+	font-family: 'Avenir';
+	font-size: 16px;
+	text-align: left;
+	font-weight:700;
+	color: #4A90E2;
+	margin-top: 20px;
+}
+.content h6 {
+	font-family: 'Avenir';
+	font-weight:700;
+	font-size: 16px;
+	color: #707070;
+}
+.content p {
+	font-family: 'Avenir';
+	font-size: 14px;
+	line-height: normal;
+	text-align: left;
+	color: #707070;
+	margin-top: 20px
+}
+/* Articles */
+
+.article-container {
+	width: 100%;
+	position: relative;
+	margin-top: 30px;
+	border-radius: 2px;
+	border: solid 1px #d4d4d4;
+	padding: 10px 0;
+}
+.article-container .article-tag {
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: 600;
+	color: #29ACE0;
+	letter-spacing: 1px;
+	background-color: #fff;
+	position: absolute;
+	margin: 0 0 0 15px;
+	padding: 5px;
+	top: -12px;
+	left: 0;
+}
+.article-container a {
+	font-size: 11px;
+	color: #229FCF;
+	margin-top: 5px;
+}
+.article-col {
+	text-align: center;
+}
+.article-col h1 {
+	font-weight: 500;
+	font-size: 14px;
+	text-align: left;
+	line-height: normal;
+	color: #707070;
+	margin-bottom: 0;
+}
+p.article-date {
+	font-size: 11px;
+	color: #F88290;
+	font-weight: 400;
+	line-height: normal;
+	margin-top: 0px;
+	margin-bottom: 0;
+}
+.article-col.left-col {
+	padding-right: 25px;
+	padding-left: 20px;
+	margin-top: 10px;
+}
+.article-col.right-col {
+	padding: 0 20px;
+}
+.article-link {
+	text-align: right;
+}
+.article-col.right-col p {
+	font-size: 12px;
+	margin-bottom: 5px;
+	margin-top: 10px;
+}
+
+/* Half width Article Container */
+
+.article-container-half {
+	width: 100%;
+	position: relative;
+	margin-top: 30px;
+	border-radius: 2px;
+	border: solid 1px #d4d4d4;
+	padding: 10px 0;
+}
+
+.article-container-half .article-tag {
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: 600;
+	color: #29ACE0;
+	letter-spacing: 1px;
+	background-color: #fff;
+	position: absolute;
+	margin: 0 0 0 15px;
+	padding: 5px;
+	top: -12px;
+	left: 0;
+}
+.article-container-half a {
+	font-size: 11px;
+	color: #229FCF;
+	margin-top: 5px;
+}
+.article-col-half {
+	text-align: center;
+}
+.article-col-half h1 {
+	font-weight: 500;
+	font-size: 14px;
+	text-align: left;
+	line-height: normal;
+	color: #707070;
+	margin-bottom: 0;
+}
+p.article-date {
+	font-size: 11px;
+	color: #F88290;
+	font-weight: 400;
+	line-height: normal;
+	margin-top: 0px;
+	margin-bottom: 0;
+}
+.article-col-half.left-col {
+	padding-right: 25px;
+	padding-left: 20px;
+	margin-top: 10px;
+}
+.article-col-half.right-col {
+	padding: 0 20px;
+}
+.article-link {
+	text-align: right;
+}
+.article-col-half.right-col p {
+	font-size: 12px;
+	margin-bottom: 5px;
+	margin-top: 10px;
+}
+
+/* Tablet Typograpghy */
+
+@media all and (min-width: 480px) {
+	.content h2 {
+		font-size: 24px;
+	}
+	.content h3 {
+		font-size: 18px;
+	}
+	.content h4 {
+		font-size: 22px;
+	}
+	.content h5 {
+		font-size: 18px;
+	}
+	.content p {
+		font-size: 16px;
+	}
+	.article-container {
+		display: table;
+		padding: 20px 0;
+	}
+	.article-col {
+		display: table-cell;
+	}
+	.article-col.left-col {
+		width: 30%;
+	}
+	.article-col.right-col {
+		width: 70%;
+	}
+	.article-col.right-col, .article-col-half.right-col p {
+		font-size: 13px;
+	}
+	.article-col h1, .article-col-half h1 {
+		font-size: 14px;
+	}
+	p.article-date {
+		font-size: 10px;
+	}
+}
+/* Desktop Typography */
+/************ DESKTOP ************/
+
+@media all and (min-width: 660px) {
+	.content h2 {
+		font-size: 28px;
+	}
+	.content h3 {
+		font-family: 'Avenir-Book';
+		font-size: 20px;
+	}
+	.content h4 {
+		font-size: 26px;
+	}
+	.content p {
+		font-size: 18px;
+	}
+	.article-container-half {
+		margin-top: 30px;
+	}
+	.article-col.right-col p, .article-col-half.right-col p {
+		font-size: 14px;
+	}
+	.article-col h1, .article-col-half h1 {
+		font-size: 16px;
+	}
+	p.article-date {
+		font-size: 12px;
+		margin-top: 5px;
+	}
+	.article-container .article-tag, .article-container-half .article.tag {
+		font-size: 12px;
+		top: -14px;
+	}
+	.article-container a, .article-container-half a {
+		font-size: 13px;
+	}
+}
+/*  Images  */
+
+.content img {
+	width: 100%;
+	margin-top: 20px
+}

@@ -1,0 +1,40 @@
+/*=================================================================
+FADE IN EFFECTS
+=================================================================*/
+/* Fade In Effect */
+.fade-in {
+	-webkit-transform: translate(0, 50px);
+	-moz-transform: translate(0, 50px);
+	-ms-transform: translate(0, 50px);
+	-o-transform: translate(0, 50px);
+	transform: translate(0, 50px);
+	opacity: 0;
+}
+.fade-in.in-view {
+	-webkit-transform: translate(0, 0px);
+	-moz-transform: translate(0, 0px);
+	-ms-transform: translate(0, 0px);
+	-o-transform: translate(0, 0px);
+	transform: translate(0, 0px);
+	opacity: 1;
+}
+.fade-in-1 {
+	-webkit-transition: -webkit-transform .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) .25s, opacity .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) .25s;
+	-moz-transition: -moz-transform .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) .25s, opacity .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) .25s;
+	transition: transform .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) .25s, opacity .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) .25s;
+}
+.fade-in-2 {
+	-webkit-transition: -webkit-transform .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) .5s, opacity .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) .5s;
+	-moz-transition: -moz-transform .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) .5s, opacity .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) .5s;
+	transition: transform .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) .5s, opacity .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) .5s;
+}
+.fade-in-3 {
+	-webkit-transition: -webkit-transform .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) .75s, opacity .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) .75s;
+	-moz-transition: -moz-transform .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) .75s, opacity .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) .75s;
+	transition: transform .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) .75s, opacity .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) .75s;
+}
+.fade-in-4 {
+	-webkit-transition: -webkit-transform .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s, opacity .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s;
+	-moz-transition: -moz-transform .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s, opacity .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s;
+	transition: transform .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s, opacity .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s;
+}

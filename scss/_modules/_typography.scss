@@ -49,34 +49,80 @@ body{
 
 h1, h2, h3, h4, h5, h6{
 	margin-bottom:1em;
+	line-height: 1.4em;
+	font-weight:500;
 }
 
 h1{
+	font-size:3em;
 }
 
 h2{
+	font-size:2.5em;
 }
 
 h3{
+	font-size: 1.75em;
 }
 
 h4{
+	font-size:1.25em;
+}
+
+h5{
+	font-size:1.125em;
+}
+
+h6{
+	margin-top:1.5em;
+	margin-bottom:0.25em;
+	font-size:1em;
+	font-weight:700;
+	&:first-child{
+		margin-top:0;
+	}
 }
 
 p{
+	font-size:1em;
+	line-height:1.4em;
 	margin-bottom:1em;
 	&:last-child{
 		margin-bottom:0;
 	}
-}
-
-h1, h2, h3, h4, h5, h6{
-}
-
-small{
+	img{
+		display: block;
+		&.aligncenter{
+			margin:0 auto;
+		}
+		&.alignright{
+			float:right;
+		}
+	}
+	&.large{
+		font-size:1.5em;
+	}
 }
 
 a{
+	text-decoration: none;
+	color:$bright-blue;
     &:hover{
+		text-decoration: underline;
     }
+}
+
+.is--reversed{
+	h1,h2,h3,h4,h5,h6,p{
+		color:$white;
+	}
+}
+
+hr{
+	width:100%;
+	height:4px;
+	border:none;
+	margin:24px 0;
+	background-image:url('assets/img/dotted-blue-hor.png');
+	background-repeat:repeat-x;
 }

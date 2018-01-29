@@ -3,7 +3,7 @@
 
 .banner{
     width:100%;
-    min-height:340px;
+    min-height:200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,18 +22,20 @@
         background:none;
     }
     &.banner--s{
-        padding:24px 0;
+        padding-top:80px;
     }
     &.banner--l{
         min-height:500px;
         padding:48px 0;
     }
     .banner__content{
+        width:100%;
         max-width:$container-max-width;
         color:$white;
         h1.title{
             font-size: 2.75em;
-            line-height: 1.125em;
+            line-height: 1.2em;
+            font-weight:700;
         }
         h2.subtitle{
             font-size:0.875em;
@@ -54,10 +56,19 @@
     }
 }
 
+@media #{$mq-xsmall} {
+    .banner{
+        &.banner--s{
+            padding-top:160px;
+        }
+    }
+}
+
 @media #{$mq-small} {
     .banner{
         &.banner--s{
-            min-height:400px;
+            min-height:200px;
+            padding-top:160px;
         }
         &.banner--l{
             min-height:600px;
@@ -68,7 +79,7 @@
 @media #{$mq-medium} {
     .banner{
         &.banner--s{
-            padding:48px 0;
+            padding-top:120px;
         }
         &.banner--l{
             padding:96px 0;

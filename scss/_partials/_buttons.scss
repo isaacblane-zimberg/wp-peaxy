@@ -13,3 +13,27 @@
         background-color:#40aedd;
     }
 }
+
+.contact-btn {
+    width:100%;
+    font-size: 15px;
+    text-align: center;
+    color: $white;
+    margin: 0;
+    display: inline-block;
+    border: 1px solid;
+    border-color: #2b5070 #31597d #31597d;
+    background-color: #447eb0;
+    padding: 8px 0 6px;
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#447eb0), to(#31597d));
+    text-transform: uppercase;
+    &:hover {
+        cursor: pointer;
+        background-color: #3a6b96;
+        background-image: none;
+        transition: all 0.1s linear;
+    }
+}
