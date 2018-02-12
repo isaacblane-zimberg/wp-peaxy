@@ -128,6 +128,7 @@ hr{width:100%;height:4px;border:0;margin:24px 0;background-image:url("assets/img
 .flex__wrapper.v-align-flex-start,.flex__wrapper.v-align-center,.flex__wrapper.v-align-flex-end{-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}
 .masonry{-webkit-column-count:2;-moz-column-count:2;column-count:2;-webkit-column-gap:24px;-moz-column-gap:24px;column-gap:24px}
 .masonry .masonry__child{margin-top:24px;box-sizing:border-box;-webkit-column-break-inside:avoid;page-break-inside:avoid;break-inside:avoid}
+.collapse{display:none}
 .banner{width:100%;min-height:200px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;box-sizing:border-box;overflow:hidden;text-align:center;background-position:center;background-size:cover;background-color:#1e3043}
 .banner.is--clipped{-webkit-clip-path:polygon(50% 100%,0 calc(100% - 30px), 0 0, 100% 0, 100% calc(100% - 30px));clip-path:polygon(50% 100%,0 calc(100% - 30px), 0 0, 100% 0, 100% calc(100% - 30px))}
 .banner.has--video{background:0}
@@ -189,6 +190,8 @@ hr{width:100%;height:4px;border:0;margin:24px 0;background-image:url("assets/img
 .team-member .team-member__photo{width:100%;margin-bottom:16px}
 .team-member .team-member__name{font-size:18px;font-weight:700;display:block;color:#156385}
 .team-member .team-member__title{display:block;font-size:14px;font-weight:500;color:rgba(0,0,0,0.6)}
+.team-member.has--bio{-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out}
+.team-member.has--bio:hover{cursor:pointer;-webkit-transform:scale(1.05);-ms-transform:scale(1.05);transform:scale(1.05)}
 .timeline{position:relative;overflow:hidden;margin-top:8px;padding:0 6px 0 0}
 .timeline:before{content:'';position:absolute;height:100%;width:3px;background:#e9e9e9;left:13px}
 .timeline h5{font-size:11px;color:#707070;margin-top:5px}
@@ -257,6 +260,7 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 .modal-open .modal{overflow-x:hidden;overflow-y:auto}
 .modal-dialog{position:relative;width:auto;margin:10px}
 .modal-content{position:relative;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,0.2);border-radius:.3rem;outline:0;padding:10px}
+.modal-content img{max-width:100%;height:auto}
 .modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;background-color:#000}
 .modal-backdrop.fade{opacity:0}
 .modal-backdrop.in{opacity:.5}

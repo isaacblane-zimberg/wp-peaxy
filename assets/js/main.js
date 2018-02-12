@@ -19,6 +19,14 @@ $("a[href='#top']").click(function() {
   return false;
 });
 
+// Toggle Accordions/Collapse
+$(".collapse-toggle").click(function(){
+	$(this).toggle();
+	$(this).parent().next('.collapse').slideToggle();
+	$(this).next('.collapse').slideToggle();
+	console.log('test');
+})
+
 // ======================================================
 //  APPEAR ON SCROLL ANIMATION
 // ======================================================

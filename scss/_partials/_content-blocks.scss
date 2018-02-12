@@ -323,6 +323,13 @@
         font-weight:500;
         color:$black-60;
     }
+    &.has--bio{
+        transition:all 0.2s ease-in-out;
+        &:hover{
+            cursor: pointer;
+            transform:scale(1.05);
+        }
+    }
 }
 
 //===== BLOCK: TIMELINE

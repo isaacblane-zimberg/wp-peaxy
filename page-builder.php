@@ -68,7 +68,7 @@
         <section id="<?php the_sub_field('id'); ?>" class="content-block type--<?php echo $type . ' ' . $classes; ?>" style="<?php if ($bg_image){echo 'background-image:url(\'' . $bg_image . '\');';} if ($bg_color){echo 'background-color:'. $bg_color;} ?>">
             <div class="container container--fw">
                 <div class="row">
-                    <div class="col col--6-of-12 col--centered">
+                    <div class="col col--12-of-12 col--centered">
                         <?php echo $content['content']; ?>
                     </div>
                 </div>
@@ -202,11 +202,37 @@
                     <?php if( have_rows('people') ): ?>
                     <?php while( have_rows('people') ): the_row(); ?>
                         <?php $image = get_sub_field('photo'); ?>
-                        <div class="col col--1-of-5 col--m-1-of-3 col--s-1-of-2 team-member">
+                        <?php $id = str_replace(" ", "", get_sub_field("name")); ?>
+                        <?php $bio = get_sub_field('bio'); ?>
+                        <div class="col col--1-of-5 col--m-1-of-3 col--s-1-of-2 team-member <?php if ($bio) { echo 'has--bio'; } ?>"
+                        <?php if ($bio) { echo 'data-toggle="modal" data-target="#' . $id . '-bio"'; } ?>>
                             <img class="team-member__photo" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
                             <span class="team-member__name"><?php echo the_sub_field('name'); ?></span>
                             <span class="team-member__title"><?php echo the_sub_field('title'); ?></span>
                         </div>
+                        <!-- Bio modal -->
+                        <?php if ($bio) : ?>
+                            <div class="modal fade" id="<?php echo $id; ?>-bio" tabindex="-1" role="dialog" style="display: none;">
+                                <div class="modal-dialog modal-medium">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                            <h3 class="modal-title" style="margin-bottom:0;"><?php echo the_sub_field('name'); ?></h3>
+                                            <p style="margin-top:0;">
+                                                <?php echo the_sub_field('title'); ?>
+                                            </p>
+                                        </div>
+                                        <div class="modal-body" style="margin-top:16px; overflow:hidden;">
+                                            <div style="float:left; margin:0 16px 0 0; width:180px; text-align:center;">
+                                                <img class="team-member__photo" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                                            </div>
+                                            <?php the_sub_field('bio'); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                        <!-- /Bio modal -->
                     <?php endwhile; endif; ?>
                 </div>
             </div>
@@ -241,6 +267,24 @@
 
 <?php endwhile; endif; ?>
 <!-- End: CONTENT BLOCKS -->
+
+<!-- Start: MODALS -->
+<?php if( have_rows('modals') ): ?>
+<?php while( have_rows('modals') ): the_row(); ?>
+    <div class="modal fade" id="<?php the_sub_field('id'); ?>" tabindex="-1" role="dialog" style="display: none;">
+        <div class="modal-dialog modal-small">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title"><?php the_sub_field('title'); ?></h4>
+                </div>
+                <div class="modal-body" id="<?php the_sub_field('id'); ?>-body">
+                    <?php the_sub_field('content'); ?>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+<?php endwhile; endif; ?>
 
 <?php endwhile; endif; ?>
 
