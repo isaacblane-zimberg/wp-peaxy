@@ -163,5 +163,17 @@
 
 
 <?php wp_footer(); ?>
+<!-- Change header text on homepage -->
+<?php if(is_front_page()) : ?>
+    <script>
+        $(document).ready(function(){
+            var heading = new Array(<?php the_field('title_array'); ?>);
+
+            randHeading = heading[Math.floor( Math.random() * heading.length )];
+
+            $('h1.title').html( randHeading );
+        })
+    </script>
+<?php endif; ?>
 </body>
 </html>
