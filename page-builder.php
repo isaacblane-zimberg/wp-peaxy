@@ -13,6 +13,7 @@
     $title = get_field('banner_title');
     $subtitle = get_field('banner_subtitle');
     $classes = get_field('banner_classes');
+    $styles = get_field('custom_styles');
     $video = get_field('banner_bg_video');
     $video_mp4 = get_field('banner_mp4');
     $video_webm = get_field('banner_webm');
@@ -27,6 +28,7 @@
     echo '" style="';
     if ($bg_image){echo 'background-image:url(\''. $bg_image . '\'); ';}
     if ($bg_color){echo 'background-color:'. $bg_color;}
+    if ($styles){echo $styles;}
     echo '">';
         echo '<div class="banner__content ';
         if (get_field('light_background')){echo 'is--light';}

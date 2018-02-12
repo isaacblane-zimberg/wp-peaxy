@@ -13,6 +13,7 @@
     $title = get_field('banner_title');
     $subtitle = get_field('banner_subtitle');
     $classes = get_field('banner_classes');
+    $styles = get_field('custom_styles');
     $video = get_field('banner_bg_video');
     $video_mp4 = get_field('banner_mp4');
     $video_webm = get_field('banner_webm');
@@ -24,6 +25,7 @@
     if ($clipped){echo 'is--clipped ';}
     if ($video){echo 'has--video ';}
     if ($classes){echo $classes;}
+    if ($styles){echo $styles;}
     echo '" style="';
     if ($bg_image){echo 'background-image:url(\''. $bg_image . '\'); ';}
     if ($bg_color){echo 'background-color:'. $bg_color;}
