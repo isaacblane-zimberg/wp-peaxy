@@ -15,8 +15,8 @@ function dothis() {
 
 // Scroll to Top
 $("a[href='#top']").click(function() {
-  $("html, body").animate({ scrollTop: 0 }, "slow");
-  return false;
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+	return false;
 });
 
 // Toggle Accordions/Collapse
@@ -24,7 +24,20 @@ $(".collapse-toggle").click(function(){
 	$(this).toggle();
 	$(this).parent().next('.collapse').slideToggle();
 	$(this).next('.collapse').slideToggle();
-	console.log('test');
+})
+
+// Panel Overlay Text Toggle
+$('[data-toggle="panel"]').click(function(){
+	var tar = $(this).data('target');
+	var panels = $(this).closest('.flex__wrapper').find('.panel-overlay');
+	$(panels).fadeOut();
+	console.log(tar);
+	$(tar).css('display', 'flex');
+	if ($(tar).is(':hidden'))
+	$(tar).show('medium', function() {
+		if ($(this).is(':visible'))
+		$(this).css('display','flex');
+	});
 })
 
 // ======================================================
@@ -50,7 +63,7 @@ function check_if_in_view() {
 		var element_bottom_position = (element_top_position + element_height);
 		//check to see if this current container is within viewport
 		if ((element_bottom_position >= window_top_position) &&
-			(element_top_position <= window_bottom_position)) {
+		(element_top_position <= window_bottom_position)) {
 			$element.addClass('in-view');
 		} else {
 			// $element.removeClass('in-view');

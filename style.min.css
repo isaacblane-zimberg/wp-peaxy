@@ -164,7 +164,7 @@ hr{width:100%;height:4px;border:0;margin:24px 0;background-image:url("assets/img
 .type--wysiwyg.padding--tight{padding:48px 0}
 .type--panel .container{box-shadow:0 0 24px rgba(0,0,0,0.25);padding:24px}
 .type--panel-split .container .flex__wrapper .flex__child{width:100%}
-.type--panel-split .container .flex__wrapper .flex__child .flex__child--inner{padding:24px}
+.type--panel-split .container .flex__wrapper .flex__child .flex__child--inner{padding:24px;position:relative !important}
 .type--panel-split .container .flex__wrapper .flex__divider{width:100%;height:18px;display:block;background-image:url("assets/img/double-dotted-hor.svg");background-repeat:repeat-x}
 .type--panel-anchor .anchor{width:100%;padding:24px;box-sizing:border-box;color:#fff;text-align:center;border-radius:4px;background-color:#1e3043}
 .type--panel-anchor .anchor .anchor__icon{width:64px;height:64px;display:inline-block;position:relative;margin-bottom:8px}
@@ -181,6 +181,7 @@ hr{width:100%;height:4px;border:0;margin:24px 0;background-image:url("assets/img
 .type--panel-anchor .flex__wrapper .anchor{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;margin:0 8px 24px 8px}
 .type--panel-anchor .flex__wrapper .anchor .anchor__info{margin-bottom:24px}
 .type--split .flex__wrapper .flex__child{width:100%;padding:24px;box-sizing:border-box}
+.type--split .flex__wrapper .flex__child .flex__child--inner{position:relative}
 .type--split .flex__wrapper .flex__child .flex__child--inner.has--shadow{box-shadow:0 0 24px rgba(0,0,0,0.25)}
 .type--split.border--dots .container{padding:24px 0;position:relative}
 .type--split.border--dots .container::before,.type--split.border--dots .container::after{content:'';width:100%;height:4px;display:block;position:absolute;background-image:url("assets/img/dotted-dark-hor.svg");background-repeat:repeat-x}
@@ -190,6 +191,7 @@ hr{width:100%;height:4px;border:0;margin:24px 0;background-image:url("assets/img
 .type--split.border--dots .flex__wrapper::before,.type--split.border--dots .flex__wrapper::after{content:'';width:4px;height:100%;display:block;position:absolute;top:0;background-image:url("assets/img/dotted-dark-vert.svg");background-repeat:repeat-y}
 .type--split.border--dots .flex__wrapper::before{left:-16px}
 .type--split.border--dots .flex__wrapper::after{right:-24px}
+.panel-overlay{display:none;position:absolute;width:100%;height:100%;top:0;left:0;background-color:rgba(0,0,0,0.8);color:white;text-align:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:24px;box-sizing:border-box;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;overflow-y:scroll}
 .type--people{text-align:center}
 .team-member{margin-bottom:32px}
 .team-member .team-member__photo{width:100%;margin-bottom:16px}
