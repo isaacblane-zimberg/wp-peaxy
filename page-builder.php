@@ -4,6 +4,8 @@
 
 <?php if (have_posts()) : while (have_posts()) : the_post();?>
 
+<div class="page__body">
+
 <!-- Start: BANNER -->
 <?php
     $bg_size = get_field('banner_size');
@@ -287,6 +289,8 @@
         </div><!-- /.modal-dialog -->
     </div>
 <?php endwhile; endif; ?>
+
+</div>
 
 <?php endwhile; endif; ?>
 
