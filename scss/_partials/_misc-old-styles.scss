@@ -21,7 +21,8 @@ Legal Notices
 	margin: 20px auto;
 }
 .container-404 h1 {
-	font-family: 'Avenir-Heavy';
+	font-family: $primary-font;
+	font-weight:700;
 	font-size: 70px;
 	color: #24303F;
 }
@@ -41,7 +42,8 @@ Legal Notices
 	background: #F52B3E;
 }
 .button p {
-	font-family: 'Avenir-Heavy';
+	font-family: $primary-font;
+	font-weight:700;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 16px;

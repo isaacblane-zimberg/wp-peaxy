@@ -105,7 +105,8 @@ button.close {
 	margin-top: -2px;
 }
 .modal-title {
-	font-family: 'Avenir-Heavy';
+	font-family: $primary-font;
+	font-weight:700;
 	color: #297B9C;
 	line-height: normal;
 }

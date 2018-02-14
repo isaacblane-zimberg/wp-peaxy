@@ -2,7 +2,7 @@
 FONTS
 =================================================================*/
 @font-face {
-	font-family: 'Avenir';
+	font-family: $primary-font;
 	src: url('assets/fonts/Avenir-Book.eot');
 	src: url('assets/fonts/Avenir-Book.eot?#iefix') format('embedded-opentype'),
 		url('assets/fonts/Avenir-Book.woff') format('woff'),
@@ -12,7 +12,7 @@ FONTS
 }
 
 @font-face {
-	font-family: 'Avenir';
+	font-family: $primary-font;
 	src: url('assets/fonts/Avenir-Medium.eot');
 	src: url('assets/fonts/Avenir-Medium.eot?#iefix') format('embedded-opentype'),
 		url('assets/fonts/Avenir-Medium.woff') format('woff'),
@@ -22,7 +22,7 @@ FONTS
 }
 
 @font-face {
-	font-family: 'Avenir';
+	font-family: $primary-font;
 	src: url('assets/fonts/AvenirLTStd-Heavy.eot');
 	src: url('assets/fonts/AvenirLTStd-Heavy.eot?#iefix') format('embedded-opentype'),
 		url('assets/fonts/AvenirLTStd-Heavy.woff') format('woff'),
@@ -32,7 +32,7 @@ FONTS
 }
 
 @font-face {
-	font-family: 'Avenir';
+	font-family: $primary-font;
 	src: url('assets/fonts/AvenirLTStd-Black.eot');
 	src: url('assets/fonts/AvenirLTStd-Black.eot?#iefix') format('embedded-opentype'),
 		url('assets/fonts/AvenirLTStd-Black.woff') format('woff'),

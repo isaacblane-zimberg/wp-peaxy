@@ -15,7 +15,7 @@
 	width: 100%;
 }
 .posts h6 a {
-	font-family: 'Avenir';
+	font-family: $primary-font;
 	font-size: 12px;
 	color: #F4354B;
     font-weight: 500;
@@ -28,7 +28,7 @@
 	margin-bottom: 0;
 }
 .posts h4 {
-	font-family: 'Avenir';
+	font-family: $primary-font;
 	font-size: 22px;
 	color: #4A90E2;
     font-weight: 700;
@@ -43,7 +43,7 @@
 }
 .posts a {} .date,
 .tags {
-	font-family: 'Avenir';
+	font-family: $primary-font;
 	font-size: 12px;
 	text-transform: uppercase;
 	color: #707070;
@@ -111,7 +111,8 @@ Blog Single Post
 	margin-top: 0;
 }*/
 #blog-single h6 {
-	font-family: 'Avenir-Medium';
+	font-family: $primary-font;
+	font-weight:500;
 	font-size: 14px;
 	color: #F4354B;
 	text-transform: uppercase;
@@ -119,7 +120,8 @@ Blog Single Post
 	margin-bottom: 5px;
 }
 #blog-single h4 {
-	font-family: 'Avenir-Heavy';
+	font-family: $primary-font;
+	font-weight:700;
 	font-size: 22px;
 	color: #4A90E2;
 	text-transform: uppercase;
@@ -138,7 +140,8 @@ Blog Single Post
 	line-height: normal;
 }
 #blog-single a {
-	font-family: 'Avenir-Medium';
+	font-family: $primary-font;
+	font-weight:500;
 	font-size: 14px;
 	color: #F4354B;
 	text-transform: uppercase;
@@ -154,7 +157,8 @@ Blog Single Post
 	list-style-position: inside;
 	list-style-type: disc;
 	color: #707070;
-	font-family: 'Avenir-Book'
+	font-family: $primary-font;
+	font-weight:400;
 }
 .blog-body img {
 	width: auto;
@@ -170,7 +174,8 @@ Blog Single Post
 	list-style-type: none;
 	font-size: 14px;
 	color: #707070;
-	font-family: 'Avenir-Book'
+	font-family: $primary-font;
+	font-weight:400;
 }
 @media (min-width: 480px) {
 	#blog-single h4 {
