@@ -10,6 +10,21 @@
     &.padding--tight{
         padding:24px 0;
     }
+    ul,ol{
+		margin-left:$spacing-m;
+	}
+	ul{
+		list-style-type: disc;
+		li{
+			list-style-type: disc;
+		}
+	}
+	ol{
+		list-style-type: disc;
+		li{
+			list-style-type: decimal;
+		}
+	}
 }
 @media #{$mq-medium} {
     .content-block{
@@ -303,7 +318,7 @@
     background-color: rgba(0,0,0,0.8);
     color: white;
     text-align: center;
-    justify-content: center;
+    // justify-content: center;
     padding: 24px;
     box-sizing: border-box;
     flex-direction: column;
@@ -378,7 +393,7 @@
 		color: #4a90e2;
 	}
 	ul {
-		list-style: none;
+		list-style: none !important;
 		padding: 0 0 0 17px;
 		z-index: 1;
 		margin: 20px 0 0 20px;
@@ -387,25 +402,26 @@
             display: block;
             clear:both;
         }
-	}
-	li {
-		background: $white;
-		padding: 20px;
-		margin-bottom: 20px;
-		position: relative;
-		border-radius: 4px;
-		box-shadow: 0 3px 8px 2px $black-20;
-		&:before {
-			content: '';
-			width: 0;
-			height: 0;
-			border-right: 10px solid $white;
-			border-bottom: 10px solid transparent;
-			border-top: 10px solid transparent;
-			position: absolute;
-			left: -10px;
-			top: 21px;
-		}
+        li {
+            list-style: none !important;
+    		background: $white;
+    		padding: 20px;
+    		margin-bottom: 20px;
+    		position: relative;
+    		border-radius: 4px;
+    		box-shadow: 0 3px 8px 2px $black-20;
+    		&:before {
+    			content: '';
+    			width: 0;
+    			height: 0;
+    			border-right: 10px solid $white;
+    			border-bottom: 10px solid transparent;
+    			border-top: 10px solid transparent;
+    			position: absolute;
+    			left: -10px;
+    			top: 21px;
+    		}
+    	}
 	}
 	p {
 		margin: 0;

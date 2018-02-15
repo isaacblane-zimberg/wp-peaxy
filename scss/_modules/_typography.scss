@@ -126,21 +126,3 @@ hr{
 	background-image:url('assets/img/dotted-blue-hor.svg');
 	background-repeat:repeat-x;
 }
-
-.page__body{
-	ul,ol{
-		margin-left:$spacing-m;
-	}
-	ul{
-		list-style-type: disc;
-		li{
-			list-style-type: disc;
-		}
-	}
-	ol{
-		list-style-type: disc;
-		li{
-			list-style-type: decimal;
-		}
-	}
-}

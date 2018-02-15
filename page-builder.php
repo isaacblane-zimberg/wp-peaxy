@@ -4,8 +4,6 @@
 
 <?php if (have_posts()) : while (have_posts()) : the_post();?>
 
-<div class="page__body">
-
 <!-- Start: BANNER -->
 <?php
     $bg_size = get_field('banner_size');
@@ -148,6 +146,7 @@
                 <div class="flex__wrapper">
                     <?php if( have_rows('anchor_blocks') ): ?>
                     <?php while( have_rows('anchor_blocks') ): the_row(); ?>
+						<?php $modal = get_sub_field('opens_modal'); ?>
                         <div class="anchor">
                             <div class="anchor__info">
                                 <div class="anchor__icon">
@@ -157,7 +156,11 @@
                                 <h4><?php the_sub_field('title'); ?></h4>
                                 <p><?php the_sub_field('description'); ?></p>
                             </div>
-                            <a class="btn" href="<?php the_sub_field('anchor_id'); ?>"><?php the_sub_field('anchor_text'); ?></a>
+							<?php if ($modal) : ?>
+								<a class="btn" data-toggle="modal" data-target="<?php the_sub_field('anchor_id'); ?>" href="javascript:;"><?php the_sub_field('anchor_text'); ?></a>
+							<?php else : ?>
+								<a class="btn" href="<?php the_sub_field('anchor_id'); ?>"><?php the_sub_field('anchor_text'); ?></a>
+							<?php endif; ?>
                         </div>
                     <?php endwhile; endif; ?>
                 </div>
@@ -278,10 +281,14 @@
     <div class="modal fade" id="<?php the_sub_field('id'); ?>" tabindex="-1" role="dialog" style="display: none;">
         <div class="modal-dialog modal-small">
             <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                    <h4 class="modal-title"><?php the_sub_field('title'); ?></h4>
-                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <?php if (get_sub_field('title')) : ?>
+                    <div class="modal-header">
+                        <h4 class="modal-title"><?php the_sub_field('title'); ?></h4>
+                    </div>
+                <?php else : ?>
+                    <div class="modal-header" style="border-bottom:none; margin-bottom:-8px;"></div>
+                <?php endif; ?>
                 <div class="modal-body" id="<?php the_sub_field('id'); ?>-body">
                     <?php the_sub_field('content'); ?>
                 </div>
@@ -289,8 +296,6 @@
         </div><!-- /.modal-dialog -->
     </div>
 <?php endwhile; endif; ?>
-
-</div>
 
 <?php endwhile; endif; ?>
 
