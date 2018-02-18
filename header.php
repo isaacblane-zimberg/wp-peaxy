@@ -38,13 +38,13 @@
             <li>
                 <a href="/blog/">Blog</a>
             </li>
-            <li>
+            <!-- <li>
                 <form action="https://www.google.com/search" role="search" method="get" class="search-form">
                     <div class="field-wrapper">
                         <input type="text" class="search-field" name="q" id="search">
                     </div>
                     <input type="hidden" name="sitesearch" value="peaxy.net">
                 </form>
-            </li>
+            </li> -->
         </ul>
     </div>

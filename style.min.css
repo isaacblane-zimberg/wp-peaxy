@@ -12,6 +12,7 @@ html{text-rendering:optimizeLegibility !important;-webkit-font-smoothing:antiali
 body{font-family:Helvetica,Arial,sans-serif;line-height:1.5em;font-size:100%;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch}
 html,body{height:100%}
 select::-ms-expand{display:none}
+a:hover{cursor:pointer !important}
 .no--pad-t{padding-top:0 !important}
 .no--pad-b{padding-bottom:0 !important}
 .no--pad-r{padding-right:0 !important}
