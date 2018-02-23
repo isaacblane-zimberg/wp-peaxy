@@ -9,6 +9,7 @@ CONTENT
 	margin: auto;
 	transition: all .3s ease-in-out;
 	overflow: hidden;
+	box-sizing: border-box;
 }
 /* Intro Section Titles */
 
@@ -86,6 +87,7 @@ CONTENT
 	padding: 5px;
 	top: -12px;
 	left: 0;
+	margin-top:-4px;
 }
 .article-container a {
 	font-size: 11px;
@@ -253,7 +255,10 @@ p.article-date {
 		font-size: 18px;
 	}
 	.article-container-half {
-		margin-top: 30px;
+		width: 47%;
+    	margin-top: 30px;
+    	margin-left: 1.5%;
+    	margin-right: 1.5%;
 	}
 	.article-col.right-col p, .article-col-half.right-col p {
 		font-size: 14px;
