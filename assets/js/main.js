@@ -40,6 +40,17 @@ $('[data-toggle="panel"]').click(function(){
 	});
 })
 
+// Change header opacity on scroll
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 72) {
+        $(".main-header").addClass("scrolled");
+    } else {
+        $(".main-header").removeClass("scrolled");
+    }
+});
+
 // ======================================================
 //  APPEAR ON SCROLL ANIMATION
 // ======================================================

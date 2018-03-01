@@ -1,5 +1,5 @@
 <?php
-/* Template Name: News */
+/* Template Name: Peaxy In The News */
 ?>
 
 <?php get_header(); ?>
@@ -54,47 +54,38 @@
 ?>
 <!-- End: BANNER -->
 
-<!-- CONTENT -->
 <div class="content">
 
-	<!-- Article Repeater -->
 	<div class="masonry">
+
 		<?php $loop = new WP_Query( array(
 			'post_type' => 'articles',
-			'posts_per_page' => 6
+			'posts_per_page' => -1
 			)
 		); ?>
 		<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-			<div class="masonry__child article-container-half fade-in fade-in-1">
-				<span class="article-tag"><?php the_field("article_publication"); ?></span>
-				<div class="article-col-half left-col">
-					<h1><?php the_title(); ?></h1>
-					<p class="article-date"><?php the_field("article_date"); ?></p>
-				</div>
-				<div class="article-col-half right-col">
-					<p><?php the_excerpt(); ?></p>
-					<div class="article-link">
-						<a href="<?php the_field("article_link"); ?>">Read More</a>
+
+				<div class="masonry__child article-container-half fade-in fade-in-1">
+					<span class="article-tag"><?php the_field("article_publication"); ?></span>
+					<div class="article-col-half left-col">
+						<h1><?php the_title(); ?></h1>
+						<p class="article-date"><?php the_field("article_date"); ?></p>
+					</div>
+					<div class="article-col-half right-col">
+						<p><?php the_excerpt(); ?></p>
+						<div class="article-link">
+							<a href="<?php the_field("article_link"); ?>">Read More</a>
+						</div>
 					</div>
 				</div>
-			</div>
+
 		<?php endwhile; wp_reset_query(); ?>
-		<a class="btn" style="display:block; margin-top:24px;" href="/peaxy-in-the-news">More News</a>
+
 	</div>
 
-	<!-- COMPANY UPDATES -->
-	<hr>
-	<h4 class="fade-in fade-in-2">COMPANY UPDATES</h4>
-	<!-- Press Release loop -->
-	<?php query_posts('post_type=company-update&posts_per_page=-1'); ?>
-	<?php while ( have_posts() ) : the_post(); ?>
-		<div class="press-release fade-in fade-in-1">
-			<a href="<?php the_permalink(); ?>"><h5><?php the_title(); ?></h5></a>
-			<?php the_excerpt(); ?>
-<!-- 			<a href="<?php the_permalink(); ?>">Continue Reading</a> -->
-		</div>
-		<?php endwhile; // end of the loop. ?>
-		<?php wp_reset_query(); ?>
+<div class="support-feature">
+	<h1><a href="/news">Back to News</a></h1>
+</div>
 
 </div>
 

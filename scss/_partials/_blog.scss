@@ -26,6 +26,10 @@
 /* Clearing WP's auto styles */
 .post-categories {
 	margin-bottom: 0;
+	margin-left:0 !important;
+	li{
+		list-style: none !important;
+	}
 }
 .posts h4 {
 	font-family: $primary-font;

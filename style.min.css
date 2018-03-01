@@ -134,7 +134,7 @@ hr{width:100%;height:4px;border:0;margin:24px 0;background-image:url("assets/img
 .banner.is--clipped{-webkit-clip-path:polygon(50% 100%,0 calc(100% - 30px), 0 0, 100% 0, 100% calc(100% - 30px));clip-path:polygon(50% 100%,0 calc(100% - 30px), 0 0, 100% 0, 100% calc(100% - 30px))}
 .banner.has--video{background:0}
 .banner.banner--s{padding-top:80px}
-.banner.banner--l{min-height:500px;padding:48px 0}
+.banner.banner--l{min-height:300px;padding:128px 0 48px 0}
 .banner .banner__content{width:100%;max-width:1156px;color:#fff}
 .banner .banner__content h1.title{font-size:2.75em;line-height:1.2em;font-weight:700}
 .banner .banner__content h2.subtitle{font-size:.875em;line-height:1.2em}
@@ -228,8 +228,8 @@ footer .social-links li.facebook a{background-position:64px}
 footer .social-links li.youtube a{background-position:32px}
 ul,li{margin:0;padding:0;list-style-type:none}
 .container{width:90%;margin:auto}
-.main-header{position:fixed;z-index:1;width:100%;padding:15px;box-sizing:border-box;background:rgba(36,48,63,0.93);-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
-body.header-solid .main-header,.header-scrolled{background:rgba(36,48,63,0.93)}
+.main-header{position:fixed;z-index:1;width:100%;padding:15px;box-sizing:border-box;background:rgba(36,48,63,0.2) !important;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
+.main-header.scrolled{background:rgba(36,48,63,0.93) !important}
 .mobile-menu{float:right;padding-top:2px;color:#fff;font-family:"Avenir";font-weight:700}
 .mobile-menu:hover{color:#24a1db;text-decoration:none}
 .peaxy-logo{-webkit-align-self:center;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center}
@@ -288,7 +288,8 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 .posts{width:100%;margin:0 auto}
 .posts img{width:100%}
 .posts h6 a{font-family:"Avenir";font-size:12px;color:#f4354b;font-weight:500;text-transform:uppercase;line-height:normal;margin-bottom:0}
-.post-categories{margin-bottom:0}
+.post-categories{margin-bottom:0;margin-left:0 !important}
+.post-categories li{list-style:none !important}
 .posts h4{font-family:"Avenir";font-size:22px;color:#4a90e2;font-weight:700;text-transform:uppercase;line-height:normal;margin-bottom:5px}
 .posts p{margin-top:20px;margin-bottom:20px;line-height:normal}
 .date,.tags{font-family:"Avenir";font-size:12px;text-transform:uppercase;color:#707070;display:inline-block;margin-bottom:10px}
@@ -404,9 +405,9 @@ p.article-date{font-size:11px;color:#f88290;font-weight:400;line-height:normal;m
 .info-tooltip li span{color:#4a90e2;white-space:nowrap}
 .info-icon{margin-left:5px}
 .show{display:inline-block !important}
-@media(min-width:30em){.banner.banner--s{padding-top:160px}
-}@media(min-width:48em){.banner.banner--s{min-height:200px;padding-top:160px}
-.banner.banner--l{min-height:600px}
+@media(min-width:30em){.banner.banner--s{padding-top:140px}
+}@media(min-width:48em){.banner.banner--s{min-height:200px;padding-top:120px}
+.banner.banner--l{min-height:400px}
 .type--panel-anchor .flex__wrapper{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row}
 .type--panel-anchor .anchor{width:48%}
 }@media(min-width:64em){.flex__wrapper{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}
@@ -415,8 +416,7 @@ p.article-date{font-size:11px;color:#f88290;font-weight:400;line-height:normal;m
 .flex__wrapper.v-align-center{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
 .flex__wrapper.v-align-flex-end{-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}
 .flex__wrapper .flex__child{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1}
-.banner.banner--s{padding-top:120px}
-.banner.banner--l{padding:96px 0}
+.banner.banner--l{padding:160px 0 96px 0}
 .banner .banner__content h1.title{font-size:3.75em}
 .banner .banner__content h2.subtitle{font-size:1.25em}
 .content-block{padding:72px 0}

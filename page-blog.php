@@ -59,7 +59,7 @@
 		<div class="row">
 			<!-- POSTS -->
 			<div class="col col--6-of-12 col--push-1-of-12">
-				<?php query_posts('post_type=post&post_status=publish&posts_per_page=-1'); ?>
+				<?php query_posts('post_type=post&post_status=publish&posts_per_page=-1&order=DESC'); ?>
 				<?php if( have_posts() ): ?>
 				<?php while( have_posts() ): the_post(); ?>
 				<!-- posts -->
