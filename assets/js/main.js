@@ -83,3 +83,17 @@ function check_if_in_view() {
 }
 $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
+
+
+// Isotope
+$(window).load(function() {
+	$('.grid').isotope({
+		itemSelector: '.article-container-half',
+		percentPosition: true,
+		layoutMode: 'masonry',
+		horizontalOrder: true,
+		masonry: {
+			columnWidth: '.article-container-half'
+		}
+	});
+});
