@@ -12,10 +12,10 @@
                         <h6><a href="/digital-twin">Digital Twin</a></h6>
                         <ul>
                             <li>
-                                <a href="#">Physics-based</a>
+                                <a href="/digital-twin/#types">Physics-based</a>
                             </li>
                             <li>
-                                <a href="#">Multifaceted</a>
+                                <a href="/digital-twin/#types">Multifaceted</a>
                             </li>
                         </ul>
                     </div>
@@ -23,36 +23,16 @@
                         <h6><a href="/industrial-analytics">Industrial Analytics</a></h6>
                         <ul>
                             <li>
-                                <a href="#">What is Industrial Analytics</a>
+                                <a href="/industrial-analytics/#whatis">What is Industrial Analytics</a>
                             </li>
                             <li>
-                                <a href="#">What are Peaxy's solutions?</a>
+                                <a href="/industrial-analytics/#solutions">What are Peaxy's solutions?</a>
+                            </li>
+							<li>
+                                <a href="/industrial-analytics/#usecases">Industrial Analytics Use Cases</a>
                             </li>
                             <li>
-                                <a href="#">Industrial Analytics Use Cases</a>
-                            </li>
-                            <li>
-                                <a href="#">Powered by Aureum</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col col--1-of-2 col--m-1-of-2">
-                        <h6><a href="/support">Support</a></h6>
-                        <ul>
-                            <li>
-                                <a href="#">On-Site Discovery</a>
-                            </li>
-                            <li>
-                                <a href="#">Pilot</a>
-                            </li>
-                            <li>
-                                <a href="#">Deployment</a>
-                            </li>
-                            <li>
-                                <a href="#">Ongoing Support</a>
-                            </li>
-                            <li>
-                                <a href="#">Resources</a>
+                                <a href="/industrial-analytics/#aureum">Powered by Aureum</a>
                             </li>
                         </ul>
                     </div>
@@ -60,24 +40,20 @@
                         <h6><a href="/about">About</a></h6>
                         <ul>
                             <li>
-                                <a href="#">News</a>
+                                <a href="/about/#leadership">Leadership</a>
                             </li>
                             <li>
-                                <a href="#">Leadership</a>
+                                <a href="/legal-notices/">Legal Notices</a>
                             </li>
                             <li>
-                                <a href="#">Legal Notices</a>
-                            </li>
-                            <li>
-                                <a href="#">Careers</a>
-                            </li>
-                            <li>
-                                <a href="#">Blog</a>
-                            </li>
-                            <li>
-                                <a href="#">Privacy Policy</a>
+                                <a href="/privacy_policy/">Privacy Policy</a>
                             </li>
                         </ul>
+                    </div>
+                    <div class="col col--1-of-2 col--m-1-of-2">
+                        <h6><a href="/support">Support</a></h6>
+						<h6><a href="/news">News</a></h6>
+						<h6><a href="/blog">Blog</a></h6>
                     </div>
                 </div>
             </div>
