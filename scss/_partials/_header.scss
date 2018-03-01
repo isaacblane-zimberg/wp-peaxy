@@ -17,10 +17,15 @@ li {
 	width: 100%;
 	padding: 15px;
 	box-sizing: border-box;
-	background: rgba(36, 48, 63, 0.2) !important;
+	background: rgba(36, 48, 63, 0.93) !important;
 	transition: all .3s ease-in-out;
-	&.scrolled{
-		background: rgba(36, 48, 63, 0.93) !important;
+}
+@media (min-width:640px){
+	.main-header {
+		background: rgba(36, 48, 63, 0.5) !important;
+		&.scrolled{
+			background: rgba(36, 48, 63, 0.93) !important;
+		}
 	}
 }
 .mobile-menu {

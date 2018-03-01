@@ -228,8 +228,7 @@ footer .social-links li.facebook a{background-position:64px}
 footer .social-links li.youtube a{background-position:32px}
 ul,li{margin:0;padding:0;list-style-type:none}
 .container{width:90%;margin:auto}
-.main-header{position:fixed;z-index:1;width:100%;padding:15px;box-sizing:border-box;background:rgba(36,48,63,0.2) !important;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
-.main-header.scrolled{background:rgba(36,48,63,0.93) !important}
+.main-header{position:fixed;z-index:1;width:100%;padding:15px;box-sizing:border-box;background:rgba(36,48,63,0.93) !important;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
 .mobile-menu{float:right;padding-top:2px;color:#fff;font-family:"Avenir";font-weight:700}
 .mobile-menu:hover{color:#24a1db;text-decoration:none}
 .peaxy-logo{-webkit-align-self:center;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center}
@@ -462,7 +461,9 @@ p.article-date{font-size:10px}
 }@media(min-width:544px){.modal-dialog{width:700px;margin:40px auto}
 .modal-sm{width:300px}
 }@media(min-width:628px){.modal iframe{height:760px !important}
-}@media(min-width:640px){.main-header{height:auto;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;background:rgba(36,48,63,0.93)}
+}@media(min-width:640px){.main-header{background:rgba(36,48,63,0.5) !important}
+.main-header.scrolled{background:rgba(36,48,63,0.93) !important}
+.main-header{height:auto;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;background:rgba(36,48,63,0.93)}
 .header-scrolled{background:rgba(36,48,63,0.93)}
 .peaxy-logo{padding:5px 0 5px}
 .main-header,.nav{display:-webkit-box !important;display:-webkit-flex !important;display:-ms-flexbox !important;display:flex !important;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}
