@@ -12,6 +12,12 @@ Then you'll install the dependencies with:
 
 `npm install`
 
-Now you can run the command `gulp`. This will watch the SCSS files for changes and recompile the `style.css` file each time you save.
+Now you can run the command `gulp`. This will watch the SCSS files for changes and recompile the `style.css` file each time you save. Use `ctrl-c` to exit the running process.
 
 You can now upload your changed files to the staging site using FTP.
+
+Now you'll want to push all your changes back up to Github, using these commands:
+
+`git add -A` - this "stages" all your changes
+`git commit -m "Type a short description of what you changed"` - commits your changes as a new version
+`git push` - Pushes your changes back up to Github
