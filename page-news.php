@@ -83,20 +83,6 @@
 
     <a class="btn" style="display:block; margin-top:24px;" href="/peaxy-in-the-news">More News</a>
 
-	<!-- COMPANY UPDATES -->
-	<hr>
-	<h4 class="fade-in fade-in-2">COMPANY UPDATES</h4>
-	<!-- Press Release loop -->
-	<?php query_posts('post_type=company-update&posts_per_page=-1'); ?>
-	<?php while ( have_posts() ) : the_post(); ?>
-		<div class="press-release fade-in fade-in-1">
-			<a href="<?php the_permalink(); ?>"><h5><?php the_title(); ?></h5></a>
-			<?php the_excerpt(); ?>
-<!-- 			<a href="<?php the_permalink(); ?>">Continue Reading</a> -->
-		</div>
-		<?php endwhile; // end of the loop. ?>
-		<?php wp_reset_query(); ?>
-
 </div>
 
 <?php get_footer(); ?>
