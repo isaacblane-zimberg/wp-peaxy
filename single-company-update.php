@@ -13,6 +13,10 @@
 		<p><?php the_content(); ?></p>
 	</div>
 </div>
+	<div style="text-align: center">
+    <h4><a href="/news">Back to News</h4>
+</div><br>
+<br>
 
 <?php endwhile; endif; ?>
 
