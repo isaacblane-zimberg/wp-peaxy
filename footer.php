@@ -60,7 +60,7 @@
             <div class="col col--1-of-2">
                 <div class="row">
                     <div class="col col--1-of-2 col--m-1-of-2">
-                        <h6>Peaxy Inc</h6>
+                        <h6>Peaxy, Inc.</h6>
                         <p>
                             2380 Bering Drive<br>
                             San Jose, CA 95131<br>
