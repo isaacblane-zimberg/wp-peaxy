@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <!-- HEADER  -->
+    <!-- HEADER test -->	
     <div class="main-header">
         <a class="peaxy-logo" href="/">
             <img src="<?php bloginfo('template_directory'); ?>/assets/img/logo.png" alt="Peaxy Logo">
