@@ -111,7 +111,8 @@
                         </ul>
                     </div>
                     <div class="col col--1-of-2 col--m-1-of-2">
-                        <span class="contact-btn" data-toggle="modal" data-target="#contact-modal">Contact</span>
+                        <!--<span class="contact-btn" data-toggle="modal" data-target="#contact-modal">Contact</span>-->
+                        <a href = "#" class="contact-btn" data-toggle="modal" data-target="#contact-modal">Contact</a>
                     </div>
                 </div>
             </div>
