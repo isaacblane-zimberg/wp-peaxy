@@ -12,14 +12,13 @@
 <body>
 
     <!-- HEADER -->
-    <!--Testing two-->
     <div class="main-header">
         <a class="peaxy-logo" href="/">
             <img src="<?php bloginfo('template_directory'); ?>/assets/img/logo.png" alt="Peaxy Logo">
         </a>
         <a class="mobile-menu" href="javascript:void(0);">MENU</a>
         <ul class="nav" id="main-navigation">
-            <li>
+            <!--<li>
                 <a href="/digital-twin">Digital Twin</a>
             </li>
             <li>
@@ -36,6 +35,9 @@
             </li>
             <li>
                 <a href="/blog/">Blog</a>
+            </li>-->
+            <li>
+              <a href="">Products</a>
             </li>
             <!-- <li>
                 <form action="https://www.google.com/search" role="search" method="get" class="search-form">
