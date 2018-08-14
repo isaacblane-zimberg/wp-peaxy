@@ -13,6 +13,15 @@ function dothis() {
 	}
 };
 
+$("ul#main-navigation li.request_demo a").attr("data-toggle", "modal");
+$("ul#main-navigation li.request_demo a").attr("data-target", "#contact-modal");
+
+/*$("ul#main-navigation li.request_demo a").click(function(){
+	//$("#request-demo-modal.menu_modal").addClass("modal_open");
+	$(".modal.menu_modal").css("display","block");
+	//alert("Hi");
+});*/
+
 // Scroll to Top
 $("a[href='#top']").click(function() {
 	$("html, body").animate({ scrollTop: 0 }, "slow");

@@ -95,6 +95,11 @@ a:hover { text-decoration: underline; }
 
 hr { width: 100%; height: 4px; border: none; margin: 24px 0; background-image: url("assets/img/dotted-blue-hor.svg"); background-repeat: repeat-x; }
 
+hr.grey{
+	background-image:none;
+	border-bottom:#c6c6c6 1px solid;
+}
+
 /*=================================================================
 FADE IN EFFECTS
 =================================================================*/
@@ -374,6 +379,10 @@ That's it. Have fun.
 
 .content-block.padding--tight { padding: 24px 0; }
 
+.content-block.less_padding{
+  padding:0px;
+}
+
 .content-block ul, .content-block ol { margin-left: 24px; }
 
 .content-block ul { list-style-type: disc; }
@@ -383,6 +392,10 @@ That's it. Have fun.
 .content-block ol { list-style-type: disc; }
 
 .content-block ol li { list-style-type: decimal; }
+
+.content-block.home_page_slider{
+  top:-100px;
+}
 
 @media (min-width: 64em) { .content-block { padding: 72px 0; }
   .content-block.mask--hex .container { position: relative; }
@@ -418,6 +431,11 @@ That's it. Have fun.
 .type--panel-split .container .flex__wrapper .flex__child { width: 100%; }
 
 .type--panel-split .container .flex__wrapper .flex__child .flex__child--inner { padding: 24px; position: relative !important; }
+
+.type--split .container .flex__wrapper .flex__child .flex__child--inner img, .type--wysiwyg img{
+  width:100%;
+  height:auto;
+}
 
 .type--panel-split .container .flex__wrapper .flex__divider { width: 100%; height: 18px; display: block; background-image: url("assets/img/double-dotted-hor.svg"); background-repeat: repeat-x; }
 
@@ -583,6 +601,10 @@ ul, li { margin: 0; padding: 0; list-style-type: none; }
 
 .main-header { position: fixed; z-index: 1; width: 100%; padding: 15px; box-sizing: border-box; background: rgba(36, 48, 63, 0.93) !important; -webkit-transition: all .3s ease-in-out; transition: all .3s ease-in-out; }
 
+.page-template-new-home-page .main-header{
+  top:0px;
+}
+
 @media (min-width: 640px) { .main-header { background: rgba(36, 48, 63, 0.5) !important; }
   .main-header.scrolled { background: rgba(36, 48, 63, 0.93) !important; } }
 
@@ -595,6 +617,10 @@ ul, li { margin: 0; padding: 0; list-style-type: none; }
 .nav { display: none; margin-top: 15px; }
 
 .nav a { display: block; color: #FFF; font-family: "Avenir"; font-weight: 500; font-size: 16px; text-align: center; padding: 5px; border-bottom: 1px solid #ebecec; text-decoration: none; }
+
+.nav li.menu_box{
+  border:#fff 2px solid;
+}
 
 .nav .dropdown li a { color: #000; }
 
@@ -627,6 +653,11 @@ ul, li { margin: 0; padding: 0; list-style-type: none; }
   .peaxy-logo { margin-right: 20px; margin-left: auto; }
   .nav li { margin-left: 10px; margin-right: 10px; }
   .nav li:nth-last-child(1) { display: block; } }
+
+  /*CG*/
+  @media (min-width: 965px) {
+    .nav a { padding: 10px 10px 10px 10px; }
+  }
 
 /* =========================================
 /* SEARCH FORM

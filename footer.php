@@ -9,18 +9,33 @@
             <div class="col col--1-of-2">
                 <div class="row">
                     <div class="col col--1-of-2 col--m-1-of-2">
-                        <h6><a href="/digital-twin">Digital Twin</a></h6>
+                        <!--<h6><a href="/digital-twin">Digital Twin</a></h6>-->
+                        <h6><a href="/digital-twin">Products</a></h6>
                         <ul>
                             <li>
-                                <a href="/digital-twin/#types">Physics-based</a>
+                                <!--<a href="/digital-twin/#types">Physics-based</a>-->
+                                <a href="/fast-proposal/">Peaxy Fast Proposal™</a>
                             </li>
                             <li>
-                                <a href="/digital-twin/#types">Multifaceted</a>
+                                <!--<a href="/digital-twin/#types">Multifaceted</a>-->
+                                <a href="/lifecycle-intelligence/">Peaxy Lifecycle Intelligence™</a>
                             </li>
                         </ul>
                     </div>
                     <div class="col col--1-of-2 col--m-1-of-2">
-                        <h6><a href="/industrial-analytics">Industrial Analytics</a></h6>
+                      <h6><a href="/company">Company</a></h6>
+                      <ul>
+                          <li>
+                              <a href="/company/#leadership">Leadership</a>
+                          </li>
+                          <li>
+                              <a href="/legal-notices/">Legal Notices</a>
+                          </li>
+                          <li>
+                              <a href="/privacy_policy/">Privacy Policy</a>
+                          </li>
+                      </ul>
+                        <!--<h6><a href="/industrial-analytics">Industrial Analytics</a></h6>
                         <ul>
                             <li>
                                 <a href="/industrial-analytics/#whatis">What is Industrial Analytics</a>
@@ -34,26 +49,16 @@
                             <li>
                                 <a href="/industrial-analytics/#aureum">Powered by Aureum</a>
                             </li>
-                        </ul>
+                        </ul>-->
                     </div>
                     <div class="col col--1-of-2 col--m-1-of-2">
-                        <h6><a href="/about">About</a></h6>
-                        <ul>
-                            <li>
-                                <a href="/about/#leadership">Leadership</a>
-                            </li>
-                            <li>
-                                <a href="/legal-notices/">Legal Notices</a>
-                            </li>
-                            <li>
-                                <a href="/privacy_policy/">Privacy Policy</a>
-                            </li>
-                        </ul>
+                        <!--<h6><a href="/about">About</a></h6>-->
+
                     </div>
                     <div class="col col--1-of-2 col--m-1-of-2">
-                        <h6><a href="/support">Support</a></h6>
-						<h6><a href="/news">News</a></h6>
-						<h6><a href="/blog">Blog</a></h6>
+                      <h6><a href="/news">News</a></h6>
+                        <!--<h6><a href="/support">Support</a></h6>
+						             <h6><a href="/blog">Blog</a></h6>-->
                     </div>
                 </div>
             </div>
@@ -85,12 +90,12 @@
                         </p>
                     </div>
                     <div class="col col--1-of-2 col--m-1-of-2">
-                        <h6>Press inquiries only:</h6>
+                        <!--<h6>Press inquiries only:</h6>
                         <p>
                             Josh Green<br>
                             jgreen@peaxy.net<br>
                             +1 408 441-6500, x213
-                        </p>
+                        </p>-->
                     </div>
                 </div>
                 <div class="row">
@@ -111,7 +116,7 @@
                         </ul>
                     </div>
                     <div class="col col--1-of-2 col--m-1-of-2">
-                        <span class="contact-btn" data-toggle="modal" data-target="#contact-modal">Contact</span>
+                        <a href="#" class="contact-btn" data-toggle="modal" data-target="#contact-modal">Request a Demo</a>
                     </div>
                 </div>
             </div>
@@ -128,10 +133,10 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Contact Us</h4>
+                <h4 class="modal-title">Request a Demo</h4>
             </div>
             <div class="modal-body" id="contact-modal-body">
-                <?php echo do_shortcode( '[contact-form-7 id="1071" title="Footer Contact Form"]' ); ?>
+                <?php echo do_shortcode( '[contact-form-7 id="3994" title="New Contact Form"]' ); ?>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

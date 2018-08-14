@@ -9,7 +9,7 @@
 
     <?php wp_head();?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 
     <!-- HEADER -->
     <div class="main-header">
@@ -17,8 +17,17 @@
             <img src="<?php bloginfo('template_directory'); ?>/assets/img/logo.png" alt="Peaxy Logo">
         </a>
         <a class="mobile-menu" href="javascript:void(0);">MENU</a>
-        <ul class="nav" id="main-navigation">
-            <!--<li>
+        <?php //wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+        <?php
+        wp_nav_menu( array(
+          'theme_location' => 'main-menu',
+          'container'      => 'ul',
+          'menu_class'     => 'mainmenu pull-left nav',
+          'menu_id'        => 'main-navigation'
+        ) );
+        ?>
+        <!--<ul class="nav" id="main-navigation">
+            <li>
                 <a href="/digital-twin">Digital Twin</a>
             </li>
             <li>
@@ -36,9 +45,6 @@
             <li>
                 <a href="/blog/">Blog</a>
             </li>-->
-            <li>
-              <a href="">Products</a>
-            </li>
             <!-- <li>
                 <form action="https://www.google.com/search" role="search" method="get" class="search-form">
                     <div class="field-wrapper">
@@ -46,6 +52,6 @@
                     </div>
                     <input type="hidden" name="sitesearch" value="peaxy.net">
                 </form>
-            </li> -->
-        </ul>
+            </li>
+        </ul>-->
     </div>

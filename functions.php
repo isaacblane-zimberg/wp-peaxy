@@ -17,4 +17,10 @@ function include_scripts() {
 }
 add_action('wp_enqueue_scripts', 'include_scripts');
 
+function peaxy_register_main_menu() {
+  register_nav_menu('main-menu',__( 'Main Menu' ));
+	register_nav_menu('footer-menu', __('Footer Menu'));
+}
+add_action( 'init', 'peaxy_register_main_menu' );
+
 ?>
