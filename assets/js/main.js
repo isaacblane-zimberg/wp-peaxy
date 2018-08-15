@@ -68,6 +68,7 @@ $(function() {
 	setTimeout(function() {
 		$('.fade-in').addClass('fade-in-show');
 	}, 500);
+
 });
 var $animation_elements = $('.fade-in');
 var $window = $(window);
