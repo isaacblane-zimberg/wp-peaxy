@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 
     <title><?php wp_title();?></title>
     <meta name="description" content="">
@@ -22,7 +22,7 @@
         wp_nav_menu( array(
           'theme_location' => 'main-menu',
           'container'      => 'ul',
-          'menu_class'     => 'mainmenu pull-left nav',
+          'menu_class'     => 'mainmenu nav',
           'menu_id'        => 'main-navigation'
         ) );
         ?>

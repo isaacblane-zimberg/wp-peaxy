@@ -106,4 +106,14 @@ $(window).load(function() {
 			columnWidth: '.article-container-half'
 		}
 	});
+
+	/*$(".home_page_slider").slick({
+		autoplay: true,
+		arrows: false,
+		dots: true,
+		autoplaySpeed: 5000,
+		appendDots: $('p.description')
+	});*/
+
+
 });

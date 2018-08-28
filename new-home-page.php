@@ -55,6 +55,7 @@
 <!-- End: BANNER -->
 
 <!-- Start: CONTENT BLOCKS -->
+<?php include 'slider.php'; ?>
 <?php if( have_rows('sections') ): ?>
 <?php
     while( have_rows('sections') ): the_row();

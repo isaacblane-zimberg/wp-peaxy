@@ -78,7 +78,7 @@
                         <p>
                             P.O. Box 190<br>
                             10123 Stockholm<br>
-                            +46 725-385-420
+                            +46 72 538 5420
                         </p>
                     </div>
                     <div class="col col--1-of-2 col--m-1-of-2">

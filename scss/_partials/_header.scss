@@ -12,7 +12,7 @@ li {
 	margin: auto;
 }
 .main-header {
-	position: fixed;
+	/*position: fixed;*/
 	z-index: 1;
 	width: 100%;
 	padding: 15px;
@@ -22,6 +22,7 @@ li {
 }
 @media (min-width:640px){
 	.main-header {
+		position: fixed;
 		background: rgba(36, 48, 63, 0.5) !important;
 		&.scrolled{
 			background: rgba(36, 48, 63, 0.93) !important;
@@ -57,6 +58,10 @@ li {
 	border-bottom: 1px solid #ebecec;
 	text-decoration: none;
 }
+
+.nav li.request_demo a{
+	border-bottom:transparent;
+}
 .nav .dropdown li a{
 	color:#000;
 }
@@ -69,15 +74,24 @@ li {
 	text-decoration: none;
 }
 
+ ul.nav li.request_demo{
+	border:#fff 2px solid;
+	padding-bottom:2px;
+}
+
+ul.nav li.request_demo a:hover{
+	border-bottom-color:transparent;
+}
+
 /* SEARCH FORM */
 .search-form .form-group span.form-control-feedback img {
 	position: relative;
 	top: 3px;
 	right: 0px;
 }
-.nav li:nth-last-child(1) {
+/*.nav li:nth-last-child(1) {
 	display: none;
-}
+}*/
 
 /* MEDIA QUERIES */
 #scrollax-parent {
@@ -94,7 +108,8 @@ li {
 @media (min-width: 640px) {
 	.main-header {
 		height: auto;
-		justify-content: flex-end;
+		/*justify-content: flex-end;*/
+		justify-content: space-around;
 		background: rgba(36, 48, 63, 0.93);
 	}
 	.header-scrolled {
@@ -106,7 +121,8 @@ li {
 	.main-header,
 	.nav {
 		display: flex !important;
-		flex-direction: column;
+		/*flex-direction: column;*/
+		flex-direction:row;
 	}
 	.mobile-menu {
 		display: none;
@@ -118,6 +134,15 @@ li {
 	.nav a {
 		font-size: 20px;
 		border-bottom-color: transparent;
+		margin-left:8px;
+		margin-right:8px;
+	}
+}
+
+@media (min-width:768px){
+	.nav a{
+		margin-left:10px;
+		margin-right:10px;
 	}
 }
 @media (min-width: 965px) {
